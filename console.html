@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-lang="ar">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SIMAT Authority Console</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="simat-title-ar" content="سمات · لوحة الجهة المشرفة">
+<meta name="simat-title-en" content="SIMAT · Authority console">
+<link rel="icon" href="assets/logo/simat-favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/tour.css">
+<link rel="stylesheet" href="css/console.css">
+</head>
+<body class="cx" data-theme="light">
+<a class="skip" href="#cx-view"><span data-l lang="ar">انتقل إلى المحتوى</span><span data-l lang="en">Skip to content</span></a>
+<div class="cx-shell" id="cx-shell" data-nav="closed">
+  <aside class="cx-rail" data-theme="dark" id="cx-rail" aria-label="Console">
+    <a class="cx-brand" href="index.html" aria-label="SIMAT">
+      <img class="logo-ar" data-l lang="ar" src="assets/logo/simat-ar-primary.svg" alt="سمات" width="112" height="63">
+      <span class="en-pair" data-l lang="en"><img class="logo-sym" src="assets/logo/simat-symbol-small-primary.svg" alt="" width="18" height="40"><img class="logo-en" src="assets/logo/simat-en-plain-primary.svg" alt="SIMAT" width="120" height="24"></span>
+    </a>
+    <div class="rail-title"><span data-l lang="ar">لوحة الجهة المشرفة</span><span data-l lang="en">Authority console</span></div>
+    <nav class="cx-nav" id="cx-nav" aria-label="Sections"></nav>
+    <div class="rail-foot">
+      <span><span data-l lang="ar">نموذج عرض · البيانات توضيحية · الربط بالأنظمة محاكاة</span><span data-l lang="en">Demo · illustrative data · system connections simulated</span></span>
+      <a href="index.html"><span data-l lang="ar">العودة إلى موقع سمات</span><span data-l lang="en">Back to the SIMAT website</span></a>
+      <a href="portal.html"><span data-l lang="ar">بوابة المستفيد</span><span data-l lang="en">My SIMAT portal</span></a>
+      <a href="clinical.html"><span data-l lang="ar">مساحة العمل السريرية</span><span data-l lang="en">Clinical workspace</span></a>
+    </div>
+  </aside>
+  <div class="cx-scrim" id="cx-scrim"></div>
+  <div class="cx-main">
+    <header class="cx-top">
+      <button type="button" class="cx-menu" id="cx-menu" aria-controls="cx-rail" aria-expanded="false" data-aria-ar="القائمة" data-aria-en="Menu"><i data-icon="menu"></i></button>
+      <div class="who">
+        <span class="av" aria-hidden="true">PM</span>
+        <div>
+          <div class="nm"><span data-l lang="ar">مدير البرنامج</span><span data-l lang="en">Programme manager</span></div>
+          <div class="rl"><span data-l lang="ar">وزارة الصحة · دخول عبر نفاذ (محاكاة)</span><span data-l lang="en">Ministry of Health · signed in via Nafath (simulated)</span></div>
+        </div>
+      </div>
+      <div class="filters">
+        <label class="sr-only" for="f-period">Period</label>
+        <select class="cx-select" id="f-period"></select>
+        <label class="sr-only" for="f-region">Region</label>
+        <select class="cx-select" id="f-region"></select>
+        <button type="button" class="cx-lang" data-tour-start="here"><i data-icon="play"></i><span data-l lang="ar">جولة إرشادية</span><span data-l lang="en">Guided tour</span></button>
+        <button type="button" class="cx-lang" data-lang-toggle><i data-icon="globe"></i><span data-l lang="ar">English</span><span data-l lang="en">العربية</span></button>
+      </div>
+    </header>
+    <main class="cx-view" id="cx-view" tabindex="-1"></main>
+  </div>
+</div>
+<div class="cx-tip" id="cx-tip" hidden></div>
+<script src="js/icons.js"></script>
+<script src="js/core.js"></script>
+<script src="js/console.js"></script>
+<script src="js/tour-steps.js"></script>
+<script src="js/tour-engine.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-lang="ar">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SIMAT · How it works</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="simat-title-ar" content="سمات · كيف تعمل">
+<meta name="simat-title-en" content="SIMAT · How it works">
+<link rel="icon" href="assets/logo/simat-favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/tour.css">
+<style>
+  [hidden] { display: none !important; }
+  .page-hero .wrap > * { max-width: 760px; }
+  .page-hero h1 { color: #fff; }
+  .page-hero .art.tall { width: min(190px, 16vw); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 999px; border: 1.5px solid #FFFFFF4D; color: #fff; text-decoration: none; font-weight: 600; font-size: 15px; }
+  .chip:hover { background: #FFFFFF14; }
+  .chip svg { width: 16px; height: 16px; }
+  .band .split .art-side { justify-self: center; width: min(420px, 100%); }
+  .cta-band .wrap { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center; }
+  .cta-band h2 { color: #fff; max-width: 640px; }
+  .sim-note { display: inline-flex; gap: 6px; align-items: center; font-size: 13px; color: var(--ink-muted); }
+  .sim-note svg { width: 15px; height: 15px; }
+
+  .entry { gap: 12px; }
+  .entry .path { font-size: 14px; color: var(--teal-ink); font-weight: 600; border-top: 1px solid var(--line); padding-top: 12px; margin-top: auto; }
+  .vt { display: grid; gap: 0; position: relative; max-width: 920px; }
+  .vt .it { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 0 24px; position: relative; padding-bottom: 40px; }
+  .vt .it:not(:last-child)::before { content: ""; position: absolute; inset-inline-start: 9px; top: 84px; bottom: 6px; width: 4px; border-radius: 4px; background: linear-gradient(var(--strand-gold), var(--rung-teal)); }
+  .vt .it .hex { --hex: 60px; align-self: start; }
+  .vt .it .body { display: grid; gap: 10px; padding-top: 10px; }
+  .vt .it .body p { color: #C9D6C4; }
+  .vt .it .body .bp { color: #DCE6D8; }
+  .choices { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 6px; }
+  .choice { padding: 14px 16px; border-radius: var(--radius-md); background: #FFFFFF0D; border: 1px solid #FFFFFF26; display: grid; gap: 4px; }
+  .choice b { color: #fff; font-weight: 600; }
+  .choice span { color: #C9D6C4; font-size: 15px; }
+  @media (max-width: 760px) { .choices { grid-template-columns: 1fr; } }
+  .punnett { width: 100%; max-width: 440px; justify-self: center; }
+  .punnett .cell { fill: var(--surface-raised); stroke: var(--line-strong); stroke-width: 2; }
+  .punnett .cell.aff { fill: var(--surface-sunken); }
+  .punnett .g-typ { stroke: var(--genome-green); }
+  .punnett .g-tr { stroke: var(--gold-mark); }
+  .punnett .gene { stroke-width: 8; stroke-linecap: round; fill: none; }
+  .punnett text { fill: var(--ink); font-family: var(--font-sans); font-size: 15px; font-weight: 600; }
+  :root[data-lang="ar"] .punnett text { font-family: var(--font-arabic); }
+  .punnett text.sub { fill: var(--ink-muted); font-weight: 400; font-size: 13px; }
+  .legend { display: flex; gap: 18px; flex-wrap: wrap; font-size: 15px; }
+  .legend span { display: inline-flex; gap: 8px; align-items: center; }
+  .legend i.sw { width: 22px; height: 8px; border-radius: 4px; display: inline-block; }
+  .flow { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; position: relative; }
+  .flow .node { position: relative; display: grid; gap: 8px; align-content: start; padding: 20px; background: var(--surface-raised); border: 1px solid var(--line); border-radius: var(--radius-md); box-shadow: var(--elevation-1); }
+  .flow .node svg { width: 24px; height: 24px; color: var(--teal-ink); }
+  .flow .node h3 { font-size: 17px; }
+  .flow .node p { font-size: 14px; color: var(--ink-muted); line-height: 1.55; }
+  :root[data-lang="ar"] .flow .node p { font-size: 15px; line-height: 1.7; }
+  .flow .node:not(:last-child)::after { content: ""; position: absolute; top: 34px; inset-inline-end: -14px; width: 14px; height: 4px; border-radius: 2px; background: var(--rung-teal); }
+  @media (max-width: 1000px) { .flow { grid-template-columns: repeat(2, minmax(0, 1fr)); } .flow .node::after { display: none; } }
+  @media (max-width: 520px) { .flow { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body data-theme="light">
+<div id="site-header" data-page="how-it-works.html"></div>
+<main id="main">
+<section class="page-hero" data-theme="dark">
+  <img class="art noflip tall" src="assets/img/helix-long.webp" alt="" aria-hidden="true">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="breadcrumb"><a href="index.html"><span data-l lang="ar">الرئيسية</span><span data-l lang="en">Home</span></a><span aria-hidden="true">/</span><span><span data-l lang="ar">كيف تعمل</span><span data-l lang="en">How it works</span></span></nav>
+    <span class="kicker"><span data-l lang="ar">المسار الكامل</span><span data-l lang="en">The full pathway</span></span>
+    <h1 class="t-h1 baseline"><span data-l lang="ar">كيف تعمل سمات</span><span data-l lang="en">How SIMAT works</span></h1>
+    <p class="t-lead"><span data-l lang="ar">من لحظة وصول النتيجة إلى آخر قريب يختار أن يُفحص: هذا هو المسار كاملًا، ومن يرى ماذا، وأين يتدخل الإنسان.</span><span data-l lang="en">From the moment a result arrives to the last relative who chooses to be tested: the whole pathway, who sees what, and where a person steps in.</span></p>
+    
+  </div>
+</section>
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><span data-l lang="ar">نقاط البداية</span><span data-l lang="en">Entry points</span></span>
+      <h2 class="t-h1"><span data-l lang="ar">من أين يبدأ المسار</span><span data-l lang="en">Where the pathway begins</span></h2>
+      <p class="t-lead"><span data-l lang="ar">أي نتيجة فحص وراثي يُجريها أحد أفراد الأسرة وتُحفظ في سجل وزارة الصحة يمكن أن تبدأ المسار. هذه أبرز الأمثلة اليوم:</span><span data-l lang="en">Any genetic test result a family member receives, once it is in the Ministry of Health record, can start the pathway. These are the main examples today:</span></p>
+    </div>
+    <div class="grid-4"><div class="card entry"><span class="ic"><i data-icon="ring"></i></span><h3 class="t-h3"><span data-l lang="ar">نتيجة ما قبل الزواج: حامل للصفة</span><span data-l lang="en">Premarital result: carrier</span></h3><p class="muted"><span data-l lang="ar">تعرف أنك تحمل الصفة. صحتك لا تتغيّر، لكن المعلومة تهمّ شريكك المستقبلي وأقاربك.</span><span data-l lang="en">You learn you carry a trait. Your health does not change, but the information matters to a future partner and to your relatives.</span></p><span class="path"><span data-l lang="ar">الفهم ← الاستشارة ← دعوة الأقارب ← فحص الأقارب</span><span data-l lang="en">Understand → counselling → relatives invited → relatives tested</span></span></div><div class="card entry"><span class="ic"><i data-icon="users"></i></span><h3 class="t-h3"><span data-l lang="ar">زوجان كلاهما حامل</span><span data-l lang="en">Both partners carry the trait</span></h3><p class="muted"><span data-l lang="ar">احتمال إصابة الطفل 1 من 4 في كل حمل. تشرح الجلسة ذلك وتعرض كل الخيارات بالوزن نفسه، مع مستشار بشري للزوجين معًا.</span><span data-l lang="en">Each pregnancy has a 1 in 4 chance of an affected child. The session explains this and lays out every option with equal weight, with a human counsellor for the couple together.</span></p><span class="path"><span data-l lang="ar">الجلسة المشتركة ← المستشار ← قرار الزوجين</span><span data-l lang="en">Joint session → counsellor → the couple’s decision</span></span></div><div class="card entry"><span class="ic"><i data-icon="baby"></i></span><h3 class="t-h3"><span data-l lang="ar">نتيجة المولود: حامل للصفة</span><span data-l lang="en">Newborn result: trait</span></h3><p class="muted"><span data-l lang="ar">أحد الوالدين على الأقل يحمل الصفة. يبدأ المسار بفحص الوالدين، ثم يمتد إلى الأسرة.</span><span data-l lang="en">At least one parent carries the trait. The path starts by testing both parents, then extends to the family.</span></p><span class="path"><span data-l lang="ar">فحص الوالدين ← الاستشارة ← الأسرة الممتدة</span><span data-l lang="en">Test both parents → counselling → wider family</span></span></div><div class="card entry"><span class="ic"><i data-icon="send"></i></span><h3 class="t-h3"><span data-l lang="ar">قريب تلقّى دعوة</span><span data-l lang="en">A relative who was invited</span></h3><p class="muted"><span data-l lang="ar">تصلك دعوة رسمية لا تذكر اسم أحد. تحجز فحصًا، وتصلك نتيجتك وحدك، وإن كنت حاملًا يبدأ مسارك الخاص.</span><span data-l lang="en">You receive an official invitation that names nobody. You book a test, the result reaches only you, and if you carry the trait your own pathway begins.</span></p><span class="path"><span data-l lang="ar">الحجز ← الفحص ← نتيجة خاصة ← مسارك</span><span data-l lang="en">Book → test → private result → your own path</span></span></div></div>
+  </div>
+</section>
+
+<section class="band" data-theme="dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><span data-l lang="ar">خطوة بخطوة</span><span data-l lang="en">Step by step</span></span>
+      <h2 class="t-h1"><span data-l lang="ar">ست خطوات من النتيجة إلى المتابعة</span><span data-l lang="en">Six steps from result to follow-up</span></h2>
+      
+    </div>
+    <div class="vt">
+      <div class="it"><span class="hex">01</span><div class="body"><h3 class="t-h3"><span data-l lang="ar">وصول النتيجة</span><span data-l lang="en">The result arrives</span></h3><p><span data-l lang="ar">يصل التقرير من مختبر الفحص إلى سمات تلقائيًا، ويصل إشعار إلى صاحب النتيجة عبر بوابته. لا تظهر النتيجة لأي قريب.</span><span data-l lang="en">The report flows from the screening lab to SIMAT automatically, and the person is notified in their portal. No relative ever sees it.</span></p><span class="tag sim"><span data-l lang="ar">ربط المختبر · محاكاة</span><span data-l lang="en">Lab connection · simulated</span></span></div></div>
+      <div class="it"><span class="hex">02</span><div class="body"><h3 class="t-h3"><span data-l lang="ar">فهم النتيجة</span><span data-l lang="en">Understanding the result</span></h3><p><span data-l lang="ar">شرح بلغة بسيطة: ماذا تعني «حامل للصفة» وماذا لا تعني. حامل الصفة سليم في الغالب، والنتيجة لا تغيّر صحته اليوم.</span><span data-l lang="en">A plain-language explanation of what “carrier” means and what it does not. Carriers are usually healthy, and the result does not change their health today.</span></p></div></div>
+      <div class="it"><span class="hex">03</span><div class="body"><h3 class="t-h3"><span data-l lang="ar">جلسة الاستشارة</span><span data-l lang="en">The counselling session</span></h3><p><span data-l lang="ar">جلسة عربية منظّمة من أربعة أجزاء، يمكن إيقافها والعودة إليها في أي وقت:</span><span data-l lang="en">A structured Arabic session in four parts, which can be paused and resumed at any time:</span></p>
+        <ul class="bp"><li><span data-l lang="ar">نتيجتك ومعناها</span><span data-l lang="en">Your result and what it means</span></li><li><span data-l lang="ar">كيف تُورَّث: احتمالات الأبناء</span><span data-l lang="en">How it is inherited: the chances for children</span></li><li><span data-l lang="ar">خياراتك، كلها بالوزن نفسه</span><span data-l lang="en">Your options, all with equal weight</span></li><li><span data-l lang="ar">أسئلتك، ومستشار بشري متاح في أي لحظة</span><span data-l lang="en">Your questions, with a human counsellor available at any moment</span></li></ul>
+        <p><span data-l lang="ar">تنتهي الجلسة بسؤال واحد: هل لديك ما تحتاجه لتقرّر؟ نسجّل جوابك، لا قرارك.</span><span data-l lang="en">The session ends with one question: do you have what you need to decide? We record the answer, not the decision.</span></p></div></div>
+      <div class="it"><span class="hex">04</span><div class="body"><h3 class="t-h3"><span data-l lang="ar">الأسرة</span><span data-l lang="en">The family</span></h3><p><span data-l lang="ar">ترتبط سمات بشجرة الأسرة في سجل وزارة الصحة، فتعرف من الأقارب المعنيّين بالصفة: الوالدان والإخوة أولًا، ثم الأعمام والأخوال وأبناؤهم. ويرى صاحب النتيجة أدوارهم فقط، دون أسماء أو نتائج.</span><span data-l lang="en">SIMAT is linked to the family tree in the Ministry of Health record, so it knows which relatives the trait concerns: parents and siblings first, then aunts, uncles and cousins. The person sees only their roles, never names or results.</span></p>
+        <div class="choices">
+          <div class="choice"><b><span data-l lang="ar">دعوة رسمية</span><span data-l lang="en">An official invitation</span></b><span><span data-l lang="ar">تصدر من الجهة الصحية لفحص مجاني.</span><span data-l lang="en">Issued by the health authority, for a free test.</span></span></div>
+          <div class="choice"><b><span data-l lang="ar">لا تذكر أحدًا</span><span data-l lang="en">It names no one</span></b><span><span data-l lang="ar">لا اسم صاحب النتيجة الأولى، ولا أنه أجرى فحصًا.</span><span data-l lang="en">Not the first person’s name, nor that they were tested.</span></span></div>
+          <div class="choice"><b><span data-l lang="ar">النتيجة لصاحبها</span><span data-l lang="en">Each result stays private</span></b><span><span data-l lang="ar">كل قريب يرى نتيجته وحده، ومن هو دون 18 عامًا تصل دعوته إلى وليّ أمره.</span><span data-l lang="en">Each relative sees only their own result; for anyone under 18 the invitation goes to their guardian.</span></span></div>
+        </div></div></div>
+      <div class="it"><span class="hex">05</span><div class="body"><h3 class="t-h3"><span data-l lang="ar">الحجز</span><span data-l lang="en">Booking</span></h3><p><span data-l lang="ar">مواعيد الفحص التأكيدي والاستشارة عبر صحتي، مع تذكيرات. ويحجز القريب المدعوّ موعده بنفسه.</span><span data-l lang="en">Confirmatory testing and counselling appointments through Sehhaty, with reminders. An invited relative books their own appointment.</span></p><span class="tag sim"><span data-l lang="ar">صحتي · محاكاة</span><span data-l lang="en">Sehhaty · simulated</span></span></div></div>
+      <div class="it"><span class="hex">06</span><div class="body"><h3 class="t-h3"><span data-l lang="ar">المتابعة والنتائج الخاصة</span><span data-l lang="en">Follow-up and private results</span></h3><p><span data-l lang="ar">نتيجة كل قريب تصله وحده. وإن كان حاملًا للصفة يبدأ مساره من الخطوة الثانية، بجلسة استشارة خاصة به.</span><span data-l lang="en">Each relative’s result reaches only them. If they carry the trait, their own path starts at step 2 with a counselling session of their own.</span></p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap split">
+    <div class="stack">
+      <div class="sec-head">
+      <span class="kicker"><span data-l lang="ar">احتمالات الأبناء</span><span data-l lang="en">The chances for children</span></span>
+      <h2 class="t-h1"><span data-l lang="ar">حين يحمل الوالدان كلاهما الصفة</span><span data-l lang="en">When both parents carry the trait</span></h2>
+      
+    </div>
+      <div class="prose">
+        <p><span data-l lang="ar">لكل إنسان نسختان من الجين، واحدة من كل والد. الحامل للصفة لديه نسخة نموذجية ونسخة تحمل الصفة. وفي كل حمل يمرّر كل والد إحدى نسختيه بالصدفة.</span><span data-l lang="en">Everyone has two copies of the gene, one from each parent. A carrier has one typical copy and one trait copy. In each pregnancy, each parent passes on one of their two copies by chance.</span></p>
+        <ul class="bp"><li><span data-l lang="ar">1 من 4: الطفل غير حامل للصفة.</span><span data-l lang="en">1 in 4: the child does not carry the trait.</span></li><li><span data-l lang="ar">2 من 4: الطفل حامل للصفة مثل والديه.</span><span data-l lang="en">2 in 4: the child is a carrier, like the parents.</span></li><li><span data-l lang="ar">1 من 4: الطفل مصاب.</span><span data-l lang="en">1 in 4: the child is affected.</span></li></ul>
+        <p><span data-l lang="ar">الاحتمال نفسه في كل حمل، ولا «يُستهلك» بإنجاب طفل مصاب أو سليم. وإذا كان أحد الوالدين فقط حاملًا، فلا يُصاب أي طفل، واحتمال أن يكون الطفل حاملًا 1 من 2.</span><span data-l lang="en">The chance is the same in every pregnancy; it is not “used up” by having an affected or unaffected child. If only one parent is a carrier, no child is affected, and each child has a 1 in 2 chance of being a carrier.</span></p>
+      </div>
+      <div class="legend"><span><i class="sw" style="background:var(--genome-green)"></i><span data-l lang="ar">نسخة نموذجية</span><span data-l lang="en">Typical copy</span></span><span><i class="sw" style="background:var(--gold-mark)"></i><span data-l lang="ar">نسخة تحمل الصفة</span><span data-l lang="en">Trait copy</span></span></div>
+    </div>
+    <svg class="punnett" viewBox="0 0 440 360" role="img" aria-labelledby="pn-t pn-d"><title id="pn-t">Punnett square: two carrier parents</title><desc id="pn-d">Each pregnancy: 1 in 4 chance the child is not a carrier, 2 in 4 a carrier like the parents, 1 in 4 affected.</desc><text x="270" y="22" text-anchor="middle"><tspan data-l lang="ar">الأب (حامل)</tspan><tspan data-l lang="en">Father (carrier)</tspan></text><path class="gene g-typ" d="M195.0 44 v28"/><path class="gene g-tr" d="M345.0 44 v28"/><text x="22" y="212" text-anchor="middle" transform="rotate(-90 22 212)"><tspan data-l lang="ar">الأم (حاملة)</tspan><tspan data-l lang="en">Mother (carrier)</tspan></text><path class="gene g-typ" d="M70 138.0 v28"/><path class="gene g-tr" d="M70 258.0 v28"/><rect class="cell" x="126" y="98" width="138" height="108" rx="8"/><path class="gene g-typ" d="M181.0 116 v40"/><path class="gene g-typ" d="M209.0 116 v40"/><text x="195.0" y="184" text-anchor="middle"><tspan data-l lang="ar">غير حامل</tspan><tspan data-l lang="en">Not a carrier</tspan></text><rect class="cell" x="276" y="98" width="138" height="108" rx="8"/><path class="gene g-typ" d="M331.0 116 v40"/><path class="gene g-tr" d="M359.0 116 v40"/><text x="345.0" y="184" text-anchor="middle"><tspan data-l lang="ar">حامل</tspan><tspan data-l lang="en">Carrier</tspan></text><rect class="cell" x="126" y="218" width="138" height="108" rx="8"/><path class="gene g-tr" d="M181.0 236 v40"/><path class="gene g-typ" d="M209.0 236 v40"/><text x="195.0" y="304" text-anchor="middle"><tspan data-l lang="ar">حامل</tspan><tspan data-l lang="en">Carrier</tspan></text><rect class="cell aff" x="276" y="218" width="138" height="108" rx="8"/><path class="gene g-tr" d="M331.0 236 v40"/><path class="gene g-tr" d="M359.0 236 v40"/><text x="345.0" y="304" text-anchor="middle"><tspan data-l lang="ar">مصاب</tspan><tspan data-l lang="en">Affected</tspan></text></svg>
+  </div>
+</section>
+
+<section class="band sunken">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><span data-l lang="ar">خلف الشاشات</span><span data-l lang="en">Behind the screens</span></span>
+      <h2 class="t-h1"><span data-l lang="ar">ما يحدث في الخلفية</span><span data-l lang="en">What happens in the background</span></h2>
+      <p class="t-lead"><span data-l lang="ar">في النموذج التجريبي كل ربط بنظام خارجي محاكاة، ومُعلَّم بذلك.</span><span data-l lang="en">In the demo, every connection to an outside system is simulated and labelled as such.</span></p>
+    </div>
+    <div class="flow">
+      <div class="node"><i data-icon="sample"></i><h3><span data-l lang="ar">المختبر</span><span data-l lang="en">The laboratory</span></h3><p><span data-l lang="ar">يرسل نتيجة الفحص بصيغة منظّمة.</span><span data-l lang="en">Sends the screening result in a structured format.</span></p><span class="tag sim"><span data-l lang="ar">محاكاة في النموذج</span><span data-l lang="en">Simulated in the demo</span></span></div>
+      <div class="node"><i data-icon="helix"></i><h3><span data-l lang="ar">سمات</span><span data-l lang="en">SIMAT</span></h3><p><span data-l lang="ar">تطبّق الدليل السريري للحالة وتفتح المسار.</span><span data-l lang="en">Applies the condition’s clinical rulebook and opens the pathway.</span></p></div>
+      <div class="node"><i data-icon="chat"></i><h3><span data-l lang="ar">فرز المستشارين</span><span data-l lang="en">Counsellor triage</span></h3><p><span data-l lang="ar">الحالات المعقّدة وطلبات التواصل تصل إلى مستشار بشري.</span><span data-l lang="en">Complex cases and contact requests reach a human counsellor.</span></p></div>
+      <div class="node"><i data-icon="appointment"></i><h3><span data-l lang="ar">صحتي</span><span data-l lang="en">Sehhaty</span></h3><p><span data-l lang="ar">حجز الفحوص والاستشارات والتذكيرات.</span><span data-l lang="en">Booking tests and counselling, with reminders.</span></p><span class="tag sim"><span data-l lang="ar">محاكاة في النموذج</span><span data-l lang="en">Simulated in the demo</span></span></div>
+      <div class="node"><i data-icon="chart"></i><h3><span data-l lang="ar">تقارير البرنامج</span><span data-l lang="en">Programme reporting</span></h3><p><span data-l lang="ar">مؤشرات مُجمَّعة غير معرِّفة لمالك البرنامج.</span><span data-l lang="en">Aggregated, de-identified indicators for the programme owner.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><span data-l lang="ar">شبكات الأمان</span><span data-l lang="en">Safety nets</span></span>
+      <h2 class="t-h1"><span data-l lang="ar">متى يتدخّل الإنسان</span><span data-l lang="en">When a person steps in</span></h2>
+      
+    </div>
+    <div class="grid-3">
+      <div class="card"><span class="ic"><i data-icon="phone"></i></span><h3 class="t-h3"><span data-l lang="ar">مستشار في كل خطوة</span><span data-l lang="en">A counsellor at every step</span></h3><p class="muted"><span data-l lang="ar">زر «تحدّث مع مستشار» ثابت في كل شاشة، ويصل الطلب إلى قائمة الفرز فورًا.</span><span data-l lang="en">A “Talk to a counsellor” button sits on every screen, and the request reaches the triage queue immediately.</span></p></div>
+      <div class="card"><span class="ic"><i data-icon="mosque"></i></span><h3 class="t-h3"><span data-l lang="ar">الأسئلة الشرعية لأهلها</span><span data-l lang="en">Religious questions go to scholars</span></h3><p class="muted"><span data-l lang="ar">لا تجيب المنصة عن الأسئلة الشرعية، وتحيلها إلى جهات الفتوى المختصة.</span><span data-l lang="en">The platform does not answer religious questions; it refers them to qualified scholars.</span></p></div>
+      <div class="card"><span class="ic"><i data-icon="heart"></i></span><h3 class="t-h3"><span data-l lang="ar">الضيق والقلق</span><span data-l lang="en">Distress and worry</span></h3><p class="muted"><span data-l lang="ar">إذا عبّر الشخص عن ضيق، يُعرض عليه التواصل مع مستشار قبل أي خطوة أخرى.</span><span data-l lang="en">If a person expresses distress, contact with a counsellor is offered before any other step.</span></p></div>
+    </div>
+  </div>
+</section>
+<section class="band band-tight cta-band" data-theme="dark"><div class="wrap">
+  <h2 class="t-h2"><span data-l lang="ar">جرّب المسار من جهة المستفيد</span><span data-l lang="en">Walk the pathway as a person would</span></h2><div class="row"><a class="btn btn-primary" href="portal.html"><i data-icon="user"></i><span data-l lang="ar">افتح بوابة المستفيد</span><span data-l lang="en">Open My SIMAT</span></a><a class="btn" href="families.html"><span data-l lang="ar">للأفراد والأسر</span><span data-l lang="en">For families</span><i data-icon="arrow" class="flip-rtl"></i></a></div></div></section>
+</main>
+<footer id="site-footer"></footer>
+<script src="js/icons.js"></script>
+<script src="js/core.js"></script>
+
+<script src="js/tour-steps.js"></script>
+<script src="js/tour-engine.js"></script>
+</body>
+</html>

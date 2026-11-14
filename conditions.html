@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-lang="ar">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SIMAT · Conditions</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="simat-title-ar" content="سمات · الحالات المشمولة">
+<meta name="simat-title-en" content="SIMAT · Conditions">
+<link rel="icon" href="assets/logo/simat-favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/tour.css">
+<style>
+  [hidden] { display: none !important; }
+  .page-hero .wrap > * { max-width: 760px; }
+  .page-hero h1 { color: #fff; }
+  .page-hero .art.tall { width: min(190px, 16vw); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 999px; border: 1.5px solid #FFFFFF4D; color: #fff; text-decoration: none; font-weight: 600; font-size: 15px; }
+  .chip:hover { background: #FFFFFF14; }
+  .chip svg { width: 16px; height: 16px; }
+  .band .split .art-side { justify-self: center; width: min(420px, 100%); }
+  .cta-band .wrap { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center; }
+  .cta-band h2 { color: #fff; max-width: 640px; }
+  .sim-note { display: inline-flex; gap: 6px; align-items: center; font-size: 13px; color: var(--ink-muted); }
+  .sim-note svg { width: 15px; height: 15px; }
+
+  .cond { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: clamp(28px, 4vw, 56px); align-items: start; }
+  .cond > * { min-width: 0; }
+  @media (max-width: 960px) { .cond { grid-template-columns: 1fr; } }
+  .facts { position: sticky; top: calc(var(--header-h) + 24px); display: grid; gap: 18px; }
+  .facts .big { font-size: 44px; line-height: 1.1; font-weight: 600; direction: ltr; unicode-bidi: isolate; font-variant-numeric: tabular-nums; color: var(--ink); }
+  :root[dir="rtl"] .facts .big { text-align: right; }
+  .facts img { width: 160px; justify-self: center; }
+  .tvd td:first-child { font-weight: 600; color: var(--ink); }
+  .rb { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 20px; }
+  .rb .part { display: grid; gap: 10px; align-content: start; }
+  .rb .part .hex { --hex: 52px; }
+  .rb .part p { color: #C9D6C4; font-size: 15px; }
+  @media (max-width: 1000px) { .rb { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 520px) { .rb { grid-template-columns: 1fr; } }
+  .h-sub { font-size: 19px; }
+</style>
+</head>
+<body data-theme="light">
+<div id="site-header" data-page="conditions.html"></div>
+<main id="main">
+<section class="page-hero" data-theme="dark">
+  <img class="art" src="assets/img/hex-cell-gold.webp" alt="" aria-hidden="true">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="breadcrumb"><a href="index.html"><span data-l lang="ar">الرئيسية</span><span data-l lang="en">Home</span></a><span aria-hidden="true">/</span><span><span data-l lang="ar">الحالات المشمولة</span><span data-l lang="en">Conditions</span></span></nav>
+    <span class="kicker"><span data-l lang="ar">الحالات المشمولة</span><span data-l lang="en">Conditions covered</span></span>
+    <h1 class="t-h1 baseline"><span data-l lang="ar">نبدأ بحالتين، ولكل حالة دليل سريري</span><span data-l lang="en">We start with two conditions, each with its own clinical rulebook</span></h1>
+    <p class="t-lead"><span data-l lang="ar">الثلاسيميا بيتا وفقر الدم المنجلي هما أكثر ما تكشفه نتائج الفحص قبل الزواج في المملكة، وكلاهما يُورَّث بالنمط المتنحي نفسه، لذا اخترناهما نقطةَ بداية.</span><span data-l lang="en">β-thalassaemia and sickle cell disease are what premarital screening finds most often in the Kingdom, and both follow the same recessive inheritance, which makes them the natural place to begin.</span></p>
+    <div class="chips"><a class="chip" href="#beta-thal"><span data-l lang="ar">الثلاسيميا بيتا</span><span data-l lang="en">β-thalassaemia</span></a><a class="chip" href="#sickle-cell"><span data-l lang="ar">فقر الدم المنجلي</span><span data-l lang="en">Sickle cell disease</span></a><a class="chip" href="#rulebooks"><span data-l lang="ar">كيف تُضاف الحالات</span><span data-l lang="en">How conditions are added</span></a></div>
+  </div>
+</section>
+<section class="band" id="beta-thal">
+  <div class="wrap cond">
+    <div class="stack">
+      <span class="tag live"><i data-icon="check" style="width:14px;height:14px"></i><span data-l lang="ar">مشمولة الآن</span><span data-l lang="en">Covered now</span></span>
+      <h2 class="t-h1 baseline"><span data-l lang="ar">الثلاسيميا بيتا</span><span data-l lang="en">β-thalassaemia</span></h2>
+      <p class="t-lead"><span data-l lang="ar">اضطراب وراثي في الدم يقلّ فيه إنتاج سلسلة «بيتا» من الهيموغلوبين، وهو البروتين الذي يحمل الأكسجين داخل كريات الدم الحمراء.</span><span data-l lang="en">An inherited blood disorder in which the body makes less of the “beta” chain of haemoglobin, the protein that carries oxygen inside red blood cells.</span></p>
+      <h3 class="t-h3"><span data-l lang="ar">حمل الصفة ليس مرضًا</span><span data-l lang="en">Carrying the trait is not the disease</span></h3>
+      <div class="table-wrap"><table class="t tvd"><thead><tr><th></th><th><span data-l lang="ar">حامل الصفة</span><span data-l lang="en">Carrier (trait)</span></th><th><span data-l lang="ar">المصاب</span><span data-l lang="en">Affected</span></th></tr></thead><tbody><tr><td><span data-l lang="ar">الصحة</span><span data-l lang="en">Health</span></td><td><span data-l lang="ar">سليم في الغالب</span><span data-l lang="en">Usually healthy</span></td><td><span data-l lang="ar">فقر دم يظهر في الطفولة المبكرة</span><span data-l lang="en">Anaemia that appears in early childhood</span></td></tr><tr><td><span data-l lang="ar">العلامات</span><span data-l lang="en">Signs</span></td><td><span data-l lang="ar">لا أعراض غالبًا. قد تكون كريات الدم أصغر حجمًا مع فقر دم خفيف، وقد يُخلط ذلك بنقص الحديد.</span><span data-l lang="en">Usually none. Red cells may be smaller with mild anaemia, which can be mistaken for iron deficiency.</span></td><td><span data-l lang="ar">في الشكل الشديد يحتاج المصاب إلى نقل دم منتظم مدى الحياة.</span><span data-l lang="en">In the severe form, regular blood transfusions are needed for life.</span></td></tr><tr><td><span data-l lang="ar">الرعاية</span><span data-l lang="en">Care</span></td><td><span data-l lang="ar">لا يحتاج علاجًا للصفة نفسها.</span><span data-l lang="en">No treatment is needed for the trait itself.</span></td><td><span data-l lang="ar">متابعة في مركز متخصص: نقل الدم، وإزالة الحديد الزائد، ومتابعة القلب.</span><span data-l lang="en">Follow-up at a specialised centre: transfusion, removal of excess iron, and heart monitoring.</span></td></tr><tr><td><span data-l lang="ar">الأبناء</span><span data-l lang="en">Children</span></td><td><span data-l lang="ar">يمكن أن ينقل الجين إلى أبنائه.</span><span data-l lang="en">Can pass the gene to children.</span></td><td><span data-l lang="ar">ينقل الجين إلى جميع أبنائه.</span><span data-l lang="en">Passes the gene to all children.</span></td></tr></tbody></table></div>
+      <h3 class="t-h3"><span data-l lang="ar">كيف تُكتشف</span><span data-l lang="en">How it is found</span></h3>
+      <ul class="bp"><li><span data-l lang="ar">الفحص قبل الزواج: تحليل الهيموغلوبين بالفصل الكروماتوغرافي (HPLC) أو الرحلان الكهربائي، ويُظهر ارتفاع HbA2 لدى الحامل.</span><span data-l lang="en">Premarital screening: haemoglobin analysis by HPLC or electrophoresis, which shows a raised HbA2 in carriers.</span></li><li><span data-l lang="ar">تعداد الدم الروتيني قد يثير الاشتباه بصغر حجم الكريات، ثم يُؤكَّد بتحليل الهيموغلوبين.</span><span data-l lang="en">A routine blood count can raise suspicion through small red cells; haemoglobin analysis then confirms it.</span></li><li><span data-l lang="ar">فحص حديثي الولادة ضمن البرنامج الوطني.</span><span data-l lang="en">Newborn screening within the national programme.</span></li></ul>
+      <h3 class="t-h3"><span data-l lang="ar">ما تقدّمه سمات</span><span data-l lang="en">What SIMAT does</span></h3>
+      <ul class="bp"><li><span data-l lang="ar">تشرح نتيجة الحامل بلغة بسيطة، وتفرّق بين الصفة والمرض.</span><span data-l lang="en">Explains a carrier result in plain language and separates the trait from the disease.</span></li><li><span data-l lang="ar">تعرض احتمالات الأبناء وفق حالة الشريك: حامل، أو غير حامل، أو غير معروفة.</span><span data-l lang="en">Shows the chances for children according to the partner’s status: carrier, not a carrier, or unknown.</span></li><li><span data-l lang="ar">تفتح مسار الأسرة للوالدين والإخوة ثم الأقارب الأبعد.</span><span data-l lang="en">Opens the family pathway for parents and siblings, then wider relatives.</span></li><li><span data-l lang="ar">للأقارب المصابين: تقارن الرعاية الحالية بإرشادات الاتحاد الدولي للثلاسيميا في مساحة العمل السريرية.</span><span data-l lang="en">For affected relatives: compares current care with the Thalassaemia International Federation guidelines in the clinical workspace.</span></li></ul>
+      <p class="t-cap"><span data-l lang="ar">معيار الرعاية المرجعي: إرشادات الاتحاد الدولي للثلاسيميا لعلاج الثلاسيميا المعتمدة على نقل الدم، الإصدار الرابع 2021.</span><span data-l lang="en">Reference care standard: Thalassaemia International Federation guidelines for transfusion-dependent thalassaemia, 4th edition, 2021.</span></p>
+    </div>
+    <aside class="facts">
+      <div class="card">
+        <span class="t-cap"><span data-l lang="ar">الفحص قبل الزواج، 2011–2018</span><span data-l lang="en">Premarital screening, 2011–2018</span></span>
+        <span class="big">22,420</span>
+        <p><span data-l lang="ar">شخصًا لديهم صفة الثلاسيميا بيتا، أي 1.2% من 1,871,184 شخصًا أجروا الفحص.</span><span data-l lang="en">people had the β-thalassaemia trait: 1.2% of the 1,871,184 who were screened.</span></p>
+        <span class="t-cap">Aljabry 2024</span>
+      </div>
+      <img src="assets/img/helix-long-light.webp" alt="" class="float slow">
+    </aside>
+  </div>
+</section>
+
+<section class="band sunken" id="sickle-cell">
+  <div class="wrap cond">
+    <div class="stack">
+      <span class="tag live"><i data-icon="check" style="width:14px;height:14px"></i><span data-l lang="ar">مشمولة الآن</span><span data-l lang="en">Covered now</span></span>
+      <h2 class="t-h1 baseline"><span data-l lang="ar">فقر الدم المنجلي</span><span data-l lang="en">Sickle cell disease</span></h2>
+      <p class="t-lead"><span data-l lang="ar">اضطراب وراثي يُنتج فيه الجسم هيموغلوبين S، فتتخذ كريات الدم الحمراء شكل المنجل حين ينخفض الأكسجين، فتتكسّر بسرعة وقد تسدّ الأوعية الدقيقة.</span><span data-l lang="en">An inherited disorder in which the body makes haemoglobin S. When oxygen is low, red cells bend into a sickle shape, break down quickly and can block small blood vessels.</span></p>
+      <h3 class="t-h3"><span data-l lang="ar">حمل الصفة ليس مرضًا</span><span data-l lang="en">Carrying the trait is not the disease</span></h3>
+      <div class="table-wrap"><table class="t tvd"><thead><tr><th></th><th><span data-l lang="ar">حامل الصفة</span><span data-l lang="en">Carrier (trait)</span></th><th><span data-l lang="ar">المصاب</span><span data-l lang="en">Affected</span></th></tr></thead><tbody><tr><td><span data-l lang="ar">الصحة</span><span data-l lang="en">Health</span></td><td><span data-l lang="ar">سليم في الغالب</span><span data-l lang="en">Usually healthy</span></td><td><span data-l lang="ar">فقر دم مزمن منذ الطفولة</span><span data-l lang="en">Chronic anaemia from childhood</span></td></tr><tr><td><span data-l lang="ar">العلامات</span><span data-l lang="en">Signs</span></td><td><span data-l lang="ar">لا أعراض غالبًا.</span><span data-l lang="en">Usually none.</span></td><td><span data-l lang="ar">نوبات ألم شديدة، وعدوى متكررة، وخطر السكتة الدماغية لدى الأطفال.</span><span data-l lang="en">Episodes of severe pain, repeated infections, and a risk of stroke in children.</span></td></tr><tr><td><span data-l lang="ar">الرعاية</span><span data-l lang="en">Care</span></td><td><span data-l lang="ar">لا يحتاج علاجًا للصفة نفسها.</span><span data-l lang="en">No treatment is needed for the trait itself.</span></td><td><span data-l lang="ar">متابعة متخصصة تشمل الرعاية الوقائية والأدوية ونقل الدم عند الحاجة، وفحص دوبلر الدماغ سنويًا للأطفال.</span><span data-l lang="en">Specialised follow-up including preventive care, medication, transfusion when indicated, and yearly transcranial Doppler for children.</span></td></tr><tr><td><span data-l lang="ar">الأبناء</span><span data-l lang="en">Children</span></td><td><span data-l lang="ar">يمكن أن ينقل الجين إلى أبنائه.</span><span data-l lang="en">Can pass the gene to children.</span></td><td><span data-l lang="ar">ينقل الجين إلى جميع أبنائه.</span><span data-l lang="en">Passes the gene to all children.</span></td></tr></tbody></table></div>
+      <p class="muted"><span data-l lang="ar">وإذا اجتمع جين الهيموغلوبين S مع جين الثلاسيميا بيتا لدى طفل، فقد يُصاب بالشكل المختلط (الخلايا المنجلية مع الثلاسيميا بيتا). لذلك تقرأ سمات النتيجتين معًا حين يختلف ما يحمله الزوجان.</span><span data-l lang="en">If a child inherits the haemoglobin S gene from one parent and a β-thalassaemia gene from the other, they can have the combined form (sickle β-thalassaemia). That is why SIMAT reads both results together when partners carry different traits.</span></p>
+      <h3 class="t-h3"><span data-l lang="ar">كيف تُكتشف</span><span data-l lang="en">How it is found</span></h3>
+      <ul class="bp"><li><span data-l lang="ar">الفحص قبل الزواج: تحليل الهيموغلوبين بالفصل الكروماتوغرافي (HPLC) أو الرحلان الكهربائي.</span><span data-l lang="en">Premarital screening: haemoglobin analysis by HPLC or electrophoresis.</span></li><li><span data-l lang="ar">فحص حديثي الولادة ضمن البرنامج الوطني.</span><span data-l lang="en">Newborn screening within the national programme.</span></li></ul>
+      <h3 class="t-h3"><span data-l lang="ar">ما تقدّمه سمات</span><span data-l lang="en">What SIMAT does</span></h3>
+      <ul class="bp"><li><span data-l lang="ar">تشرح نتيجة الحامل، وتعرض احتمالات الأبناء وفق حالة الشريك.</span><span data-l lang="en">Explains a carrier result and shows the chances for children according to the partner’s status.</span></li><li><span data-l lang="ar">تفتح مسار الأسرة، وتصل نتيجة الصفة لدى المولود بفحص الوالدين.</span><span data-l lang="en">Opens the family pathway, and links a newborn trait result to testing both parents.</span></li><li><span data-l lang="ar">للأقارب المصابين: تقارن الرعاية الحالية بالإرشادات المرجعية في مساحة العمل السريرية.</span><span data-l lang="en">For affected relatives: compares current care with the reference guidelines in the clinical workspace.</span></li></ul>
+      <p class="t-cap"><span data-l lang="ar">معايير الرعاية المرجعية: إرشادات الجمعية الأمريكية لأمراض الدم لنقل الدم في فقر الدم المنجلي (2020)، وتقرير لجنة خبراء المعهد الوطني الأمريكي للقلب والرئة والدم (2014).</span><span data-l lang="en">Reference care standards: American Society of Hematology guidelines on transfusion in sickle cell disease (2020) and the NHLBI expert panel report (2014).</span></p>
+    </div>
+    <aside class="facts">
+      <div class="card">
+        <span class="t-cap"><span data-l lang="ar">الفحص قبل الزواج، 2011–2018</span><span data-l lang="en">Premarital screening, 2011–2018</span></span>
+        <span class="big">88,431</span>
+        <p><span data-l lang="ar">شخصًا وُجد لديهم الهيموغلوبين S، أي 4.7% ممن أجروا الفحص، و78.5% من كل النتائج غير الطبيعية.</span><span data-l lang="en">people had haemoglobin S: 4.7% of those screened, and 78.5% of all abnormal results.</span></p>
+        <span class="t-cap">Aljabry 2024</span>
+      </div>
+      <img src="assets/img/molecule-light.webp" alt="" class="float d1">
+    </aside>
+  </div>
+</section>
+
+<section class="band" data-theme="dark" id="rulebooks">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><span data-l lang="ar">كيف تُضاف الحالات</span><span data-l lang="en">How conditions are added</span></span>
+      <h2 class="t-h1"><span data-l lang="ar">كل حالة في سمات دليلٌ سريري مُراجَع</span><span data-l lang="en">Every condition in SIMAT is a reviewed clinical rulebook</span></h2>
+      <p class="t-lead" style="color:#C9D6C4"><span data-l lang="ar">لا تعمل المنصة على حالة إلا من خلال دليلها. يجمع الدليل خمسة أجزاء، ويُراجَع ويُعتمد قبل التفعيل.</span><span data-l lang="en">The platform only works on a condition through its rulebook. Each rulebook brings five parts together and is reviewed and approved before it goes live.</span></p>
+    </div>
+    <div class="rb">
+      <div class="part"><span class="hex">01</span><h3 class="t-h3 h-sub"><span data-l lang="ar">نمط الوراثة</span><span data-l lang="en">Inheritance pattern</span></h3><p><span data-l lang="ar">كيف تنتقل الصفة، ومنه تُحسب احتمالات الأبناء والأقارب.</span><span data-l lang="en">How the trait is passed on; the chances for children and relatives follow from it.</span></p></div>
+      <div class="part"><span class="hex">02</span><h3 class="t-h3 h-sub"><span data-l lang="ar">الفحص التأكيدي</span><span data-l lang="en">Confirmatory test</span></h3><p><span data-l lang="ar">ما يؤكّد النتيجة، ومتى يُطلب تلقائيًا.</span><span data-l lang="en">What confirms the result, and when it is ordered automatically.</span></p></div>
+      <div class="part"><span class="hex">03</span><h3 class="t-h3 h-sub"><span data-l lang="ar">نطاق دعوة الأسرة</span><span data-l lang="en">Family invitation scope</span></h3><p><span data-l lang="ar">أيّ الأقارب يُعرضون أولًا، وإلى أي درجة قرابة.</span><span data-l lang="en">Which relatives are shown first, and to what degree of kinship.</span></p></div>
+      <div class="part"><span class="hex">04</span><h3 class="t-h3 h-sub"><span data-l lang="ar">محتوى الاستشارة</span><span data-l lang="en">Counselling content</span></h3><p><span data-l lang="ar">نصوص ثابتة بالعربية والإنجليزية، مُراجَعة ومُرقَّمة الإصدار.</span><span data-l lang="en">Fixed Arabic and English text, reviewed and versioned.</span></p></div>
+      <div class="part"><span class="hex">05</span><h3 class="t-h3 h-sub"><span data-l lang="ar">معيار الرعاية</span><span data-l lang="en">Care standard</span></h3><p><span data-l lang="ar">الإرشادات المرجعية التي تُقارن بها رعاية المصابين.</span><span data-l lang="en">The reference guidelines against which care for affected people is checked.</span></p></div>
+    </div>
+    <div class="note" style="margin-top:40px"><i data-icon="shield"></i><p><span data-l lang="ar">يراجع كل دليل مختصون في الوراثة السريرية وفي التخصص المعني، ويعتمده مالك البرنامج قبل تفعيله. ولا تُفعَّل أي حالة دون دليل معتمد، وكل تعديل لاحق يُسجَّل بإصدار جديد.</span><span data-l lang="en">Each rulebook is reviewed by specialists in clinical genetics and the relevant specialty, and approved by the programme owner before it goes live. No condition is activated without an approved rulebook, and every later change is recorded as a new version.</span></p></div>
+  </div>
+</section>
+
+<section class="band band-tight">
+  <div class="wrap"><div class="note"><i data-icon="alert"></i><p><span data-l lang="ar">هذه الصفحة للتثقيف العام ولا تغني عن استشارة الطبيب أو المستشار الوراثي.</span><span data-l lang="en">This page is general education and does not replace advice from a doctor or genetic counsellor.</span></p></div></div>
+</section>
+<section class="band band-tight cta-band" data-theme="dark"><div class="wrap">
+  <h2 class="t-h2"><span data-l lang="ar">اقرأ نتيجتك بلغة واضحة</span><span data-l lang="en">Read your result in plain language</span></h2><div class="row"><a class="btn btn-primary" href="portal.html"><i data-icon="user"></i><span data-l lang="ar">افتح بوابة المستفيد</span><span data-l lang="en">Open My SIMAT</span></a><a class="btn" href="how-it-works.html"><span data-l lang="ar">كيف تعمل سمات</span><span data-l lang="en">How SIMAT works</span><i data-icon="arrow" class="flip-rtl"></i></a></div></div></section>
+</main>
+<footer id="site-footer"></footer>
+<script src="js/icons.js"></script>
+<script src="js/core.js"></script>
+
+<script src="js/tour-steps.js"></script>
+<script src="js/tour-engine.js"></script>
+</body>
+</html>

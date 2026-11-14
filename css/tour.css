@@ -1,0 +1,50 @@
+/* SIMAT guided tour. Pinned to the light palette so a host-forced dark theme can't invert it. */
+.tour { display: none; font-family: inherit; }
+.tour.on { display: block; }
+.tour-spot {
+  position: fixed; z-index: 9998; pointer-events: none; border-radius: 10px;
+  box-shadow: 0 0 0 9999px rgba(5, 20, 2, .55), 0 0 0 3px #EFBF04, 0 0 24px 4px rgba(239, 191, 4, .45);
+  transition: top .25s ease, left .25s ease, width .25s ease, height .25s ease;
+}
+.tour-spot.none { top: 0; left: 0; width: 0; height: 0; box-shadow: 0 0 0 9999px rgba(5, 20, 2, .55); }
+.tour-card {
+  position: fixed; z-index: 9999; background: #FFFFFF; color: #103500; border-radius: 12px;
+  border: 1px solid #DFE8DC; box-shadow: 0 6px 12px #05140229, 8px 32px 56px -14px #05140266;
+  padding: 16px 18px 14px; max-height: calc(100vh - 32px); overflow: auto;
+  transition: top .25s ease, left .25s ease;
+}
+.tour-card:focus { outline: none; }
+.tour-card.sheet { left: 8px !important; right: 8px; bottom: 8px; top: auto !important; width: auto !important; transform: none !important; max-height: 46vh; }
+.tour-top { display: flex; align-items: center; gap: 10px; font-size: 13px; }
+.tour-chap { font-weight: 600; color: #00717A; text-transform: none; }
+.tour-count { color: #58714F; font-variant-numeric: tabular-nums; direction: ltr; unicode-bidi: isolate; }
+.tour-x { margin-inline-start: auto; background: none; border: 0; color: #58714F; font: inherit; font-size: 13px; cursor: pointer; padding: 6px 4px; min-height: 24px; text-decoration: underline; text-underline-offset: 3px; }
+.tour-x:hover { color: #103500; }
+.tour-bar { height: 4px; background: #DFE8DC; border-radius: 4px; margin: 10px 0 12px; overflow: hidden; }
+.tour-bar i { display: block; height: 100%; background: #103500; border-radius: 4px; transition: width .25s ease; }
+.tour-title { font-size: 19px; line-height: 1.35; margin: 0 0 6px; font-weight: 700; color: #103500; }
+.tour-body { margin: 0; font-size: 15px; line-height: 1.6; color: #103500; }
+.tour-try { margin: 10px 0 0; font-size: 14px; line-height: 1.55; color: #103500; background: #FFF6CC; border-inline-start: 3px solid #EFBF04; padding: 8px 10px; border-radius: 6px; }
+.tour-try::before { content: "▸ "; color: #A38200; }
+.tour-nav { display: flex; align-items: center; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+.tour-sp { flex: 1; }
+.tour-jump { font: inherit; font-size: 13px; color: #103500; background: #F4F8F3; border: 1px solid #58714F; border-radius: 8px; padding: 6px 8px; min-height: 36px; max-width: 190px; }
+.tour-btn { font: inherit; font-size: 14px; font-weight: 600; min-height: 40px; padding: 0 16px; border-radius: 9999px; border: 1px solid #103500; background: #FFFFFF; color: #103500; cursor: pointer; }
+.tour-btn:disabled { opacity: .45; cursor: default; }
+.tour-next { background: #103500; color: #FFFFFF; }
+.tour-btn:focus-visible, .tour-x:focus-visible, .tour-jump:focus-visible { outline: 3px solid #00717A; outline-offset: 2px; }
+.tour-live { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); margin: 0; }
+[lang="ar"] .tour-title, [dir="rtl"] .tour-title { font-size: 20px; }
+[dir="rtl"] .tour-body, [dir="rtl"] .tour-try { line-height: 1.75; }
+html.touring { scroll-behavior: auto !important; }
+/* launcher */
+.tour-launch { display: inline-flex; align-items: center; gap: 6px; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer;
+  background: #EFBF04; color: #103500; border: 0; border-radius: 9999px; padding: 4px 12px; min-height: 28px; margin-inline-start: 12px; }
+.tour-launch:hover { filter: brightness(1.05); }
+.tour-launch:focus-visible { outline: 3px solid #FFFFFF; outline-offset: 2px; }
+.tour-launch svg { width: 14px; height: 14px; }
+.tour-float { position: fixed; z-index: 9000; bottom: 16px; inset-inline-start: 16px; margin: 0; min-height: 40px; padding: 0 16px; font-size: 14px; box-shadow: 0 4px 14px #0514023d; }
+html.touring .tour-float { display: none; }
+.tour-float.tour-float-up { bottom: 96px; }
+@media (prefers-reduced-motion: reduce) { .tour-spot, .tour-card, .tour-bar i { transition: none; } }
+@media print { .tour { display: none !important; } }

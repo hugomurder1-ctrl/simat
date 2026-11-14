@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-lang="ar">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body data-theme="light">
+<title>SIMAT · سمات</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="simat-title-ar" content="سمات · برنامج وطني مقترح للاستشارة الوراثية">
+<meta name="simat-title-en" content="SIMAT · Proposed national genetic counselling programme">
+<link rel="icon" href="assets/logo/simat-favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/tour.css">
+<style>
+  .hero { background: var(--gradient-genome-depth); color: #fff; position: relative; overflow: hidden; padding-block: clamp(56px, 8vw, 112px) clamp(64px, 8vw, 104px); }
+  .hero::before { content: ""; position: absolute; inset: 0; background:
+      radial-gradient(40% 50% at 78% 45%, #10B6C42E 0%, transparent 70%),
+      radial-gradient(30% 40% at 70% 70%, #EFBF0424 0%, transparent 70%); pointer-events: none; }
+  :root[dir="rtl"] .hero::before { transform: scaleX(-1); }
+  .hero .split { position: relative; z-index: 1; }
+  .hero h1 { color: #fff; }
+  .hero .t-lead { color: #C9D6C4; }
+  .hero-art { position: relative; aspect-ratio: 1 / 1; max-width: 560px; width: 100%; justify-self: center; }
+  .hero-art img { position: absolute; }
+  .hero-art .main { inset: 4% 8% 0 8%; width: 84%; filter: drop-shadow(0 30px 60px #00000066); }
+  .hero-art .p1 { width: 17%; top: 4%; inset-inline-start: 0; filter: blur(1.5px); opacity: .85; }
+  .hero-art .p2 { width: 13%; bottom: 10%; inset-inline-end: 2%; }
+  .hero-art .p3 { width: 22%; bottom: 0; inset-inline-start: 4%; opacity: .9; }
+  .hero-trust { display: flex; flex-wrap: wrap; gap: 8px 10px; align-items: center; color: #9AAA95; font-size: 14px; }
+  .hero-trust .tag { color: #DCE6D8; }
+  .gap-card .hex { --hex: 52px; }
+  .aud-card ul { margin: 0; }
+  .principles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--line); }
+  .principle { padding: 26px 24px 26px 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 44px 1fr; gap: 6px 16px; align-content: start; }
+  :root[dir="rtl"] .principle { padding: 26px 0 26px 24px; }
+  .principle svg { width: 26px; height: 26px; color: var(--teal-ink); grid-row: span 2; margin-top: 4px; }
+  @media (max-width: 860px) { .principles { grid-template-columns: 1fr; } }
+  .align-col { display: grid; gap: 12px; align-content: start; padding-top: 22px; border-top: 4px solid var(--strand-gold); }
+  .align-col:nth-child(2) { border-top-color: var(--rung-teal); }
+  .align-col:nth-child(3) { border-top-color: #fff; }
+  .align-col .who { font-size: 14px; color: #9AAA95; }
+  .align-col .how { color: #DCE6D8; }
+  .cond-card { position: relative; overflow: hidden; padding-inline-end: 140px; min-height: 220px; }
+  .cond-card img { position: absolute; width: 150px; inset-inline-end: -10px; bottom: -14px; opacity: .95; }
+  @media (max-width: 520px) { .cond-card { padding-inline-end: 28px; } .cond-card img { width: 96px; opacity: .25; } }
+  .demo-tile { display: grid; gap: 12px; padding: 28px; border-radius: var(--radius-md); background: #FFFFFF0D; border: 1px solid #FFFFFF26; color: #fff; text-decoration: none; transition: transform .2s, background .2s; }
+  .demo-tile:hover { transform: translateY(-3px); background: #FFFFFF17; }
+  .demo-tile svg.big { width: 30px; height: 30px; color: var(--strand-gold); }
+  .demo-tile .go { display: flex; gap: 6px; align-items: center; color: var(--strand-gold); font-weight: 600; margin-top: 6px; }
+  .demo-tile .go svg { width: 18px; height: 18px; }
+</style>
+<div id="site-header" data-page="index.html"></div>
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" data-theme="dark">
+  <div class="wrap split">
+    <div class="stack">
+      <span class="kicker"><span data-l lang="ar">برنامج وطني مقترح · متوافق مع هدف برنامج الجينوم السعودي</span><span data-l lang="en">A proposed national programme · aligned with the Saudi Genome Program</span></span>
+      <h1 class="t-display baseline"><span data-l lang="ar">نتيجة فحصٍ واحدة،<br>وقرارٌ مستنير لأسرةٍ كاملة.</span><span data-l lang="en">One screening result.<br>An informed decision for a whole family.</span></h1>
+      <p class="t-lead"><span data-l lang="ar">سمات تحوّل نتيجة أي فحص وراثي، قبل الزواج أو عند الولادة أو في أي مرحلة من العمر، إلى مسار واضح: فهمٌ بلغتك، واستشارة وراثية غير توجيهية، ودعوة آمنة لأقاربك لا تذكر اسمك، ثم حجزٌ ومتابعة حتى تكتمل الحلقة.</span><span data-l lang="en">SIMAT turns any genetic test result, premarital, newborn or at any stage of life, into a clear pathway: understanding in your own language, non-directive genetic counselling, a private invitation for your relatives that never names you, then booking and follow-up until the loop is closed.</span></p>
+      <div class="row">
+        <a class="btn btn-primary" href="portal.html"><i data-icon="user"></i><span data-l lang="ar">ابدأ من نتيجتك</span><span data-l lang="en">Start from your result</span></a>
+        <a class="btn" href="how-it-works.html"><span data-l lang="ar">كيف تعمل سمات</span><span data-l lang="en">How SIMAT works</span><i data-icon="arrow" class="flip-rtl"></i></a>
+        <button type="button" class="btn" data-tour-start="0"><i data-icon="play"></i><span data-l lang="ar">جولة في كل الميزات</span><span data-l lang="en">Tour every feature</span></button>
+      </div>
+      <div class="hero-trust">
+        <span data-l lang="ar">تعمل فوق برامج وطنية قائمة:</span><span data-l lang="en">Built on top of existing national programmes:</span>
+        <span class="tag"><span data-l lang="ar">برنامج الزواج الصحي</span><span data-l lang="en">Healthy Marriage Program</span></span>
+        <span class="tag"><span data-l lang="ar">فحص حديثي الولادة</span><span data-l lang="en">Newborn screening</span></span>
+        <span class="tag"><span data-l lang="ar">الفحوص الوراثية الأخرى</span><span data-l lang="en">Other genetic tests</span></span>
+        <span class="tag sim"><span data-l lang="ar">صحتي · محاكاة</span><span data-l lang="en">Sehhaty · simulated</span></span>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <img class="p1 float slow d1" src="assets/img/hex-cell-gold.webp" alt="">
+      <img class="main float slow" src="assets/img/hero-cluster.webp" alt="">
+      <img class="p2 float d2" src="assets/img/hex-atom.webp" alt="">
+      <img class="p3 float d1" src="assets/img/molecule.webp" alt="">
+    </div>
+  </div>
+</section>
+
+<!-- THE GAP -->
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><span data-l lang="ar">لماذا الآن</span><span data-l lang="en">Why now</span></span>
+      <h2 class="t-h1"><span data-l lang="ar">الفحص يحدث بالفعل. ما بعد النتيجة هو الفجوة.</span><span data-l lang="en">Screening already happens. What follows the result is the gap.</span></h2>
+      <p class="t-lead"><span data-l lang="ar">الفحص قبل الزواج إلزامي في المملكة منذ 2004، وفحص حديثي الولادة قائم منذ 2005. الأرقام تُظهر حجم ما يصل إلى الأسر كل عام.</span><span data-l lang="en">Premarital screening has been mandatory in Saudi Arabia since 2004, and newborn screening has run since 2005. The numbers show how much reaches families every year.</span></p>
+    </div>
+    <h3 class="t-h3 stats-lead"><span data-l lang="ar">حسب آخر الدراسات</span><span data-l lang="en">According to the latest studies</span></h3>
+    <div class="stats">
+      <div class="stat"><span class="v">1,871,184</span><span class="k"><span data-l lang="ar">شخصًا أجروا الفحص قبل الزواج بين 2011 و2018</span><span data-l lang="en">people completed premarital screening, 2011–2018</span></span></div>
+      <div class="stat"><span class="v">4.7%</span><span class="k"><span data-l lang="ar">يحملون صفة الخلايا المنجلية (HbS)</span><span data-l lang="en">carry the sickle-cell trait (HbS)</span></span></div>
+      <div class="stat"><span class="v">1.2%</span><span class="k"><span data-l lang="ar">يحملون صفة الثلاسيميا بيتا</span><span data-l lang="en">carry the β-thalassaemia trait</span></span></div>
+      <div class="stat"><span class="v">56%</span><span class="k"><span data-l lang="ar">من الزيجات بين أقارب، ثلثها تقريبًا بين أبناء العمومة والخؤولة</span><span data-l lang="en">of marriages are consanguineous, about a third between first cousins</span></span></div>
+    </div>
+    <div class="grid-3" style="margin-top:48px">
+      <div class="card gap-card">
+        <span class="hex">01</span>
+        <h3 class="t-h3"><span data-l lang="ar">الاستشارة لحظة واحدة</span><span data-l lang="en">Counselling is a single moment</span></h3>
+        <p class="muted"><span data-l lang="ar">تُقدَّم عند إصدار شهادة الفحص للزوجين المعرّضين للخطر، ثم لا يوجد مسار منظّم للأسئلة التي تأتي بعدها.</span><span data-l lang="en">It is offered to at-risk couples when the certificate is issued. There is no structured path for the questions that come afterwards.</span></p>
+      </div>
+      <div class="card gap-card">
+        <span class="hex">02</span>
+        <h3 class="t-h3"><span data-l lang="ar">الأقارب لا يعلمون</span><span data-l lang="en">Relatives are not reached</span></h3>
+        <p class="muted"><span data-l lang="ar">كل حاملٍ للصفة يعني أن إخوته وأبناء عمومته قد يحملونها أيضًا. لا توجد اليوم آلية آمنة لإبلاغهم دون كشف خصوصية أحد.</span><span data-l lang="en">Every carrier means siblings and cousins may carry the trait too. Today there is no safe way to tell them without exposing anyone’s privacy.</span></p>
+      </div>
+      <div class="card gap-card">
+        <span class="hex">03</span>
+        <h3 class="t-h3"><span data-l lang="ar">نتيجة المولود بلا مسار</span><span data-l lang="en">Newborn results have no family path</span></h3>
+        <p class="muted"><span data-l lang="ar">حين تُظهر نتيجة المولود حمل الصفة، فإن أحد الوالدين على الأقل حامل لها. هذه أقوى نقطة بداية للأسرة، ولا تُستثمر اليوم.</span><span data-l lang="en">When a newborn’s result shows a trait, at least one parent is a carrier. It is the strongest starting point for a family, and it goes unused today.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="band" data-theme="dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><span data-l lang="ar">المسار</span><span data-l lang="en">The pathway</span></span>
+      <h2 class="t-h1"><span data-l lang="ar">من النتيجة إلى المتابعة، في أربع خطوات</span><span data-l lang="en">From result to follow-up, in four steps</span></h2>
+    </div>
+    <div class="strand" style="--steps:4">
+      <div class="step"><span class="hex">01</span><h3 class="t-h3"><span data-l lang="ar">تصلك النتيجة</span><span data-l lang="en">Your result arrives</span></h3><p class="muted"><span data-l lang="ar">من أي مختبر فحص وراثي إلى سجلّك في وزارة الصحة، ثم إلى بوابتك بلغة واضحة لا رموز مختبر.</span><span data-l lang="en">From any genetic testing lab to your Ministry of Health record, then to your portal in plain language rather than lab codes.</span></p></div>
+      <div class="step"><span class="hex">02</span><h3 class="t-h3"><span data-l lang="ar">تفهمها وتستشير</span><span data-l lang="en">You understand and ask</span></h3><p class="muted"><span data-l lang="ar">جلسة استشارة وراثية بالعربية: معنى النتيجة، وكيف تُورَّث، وكل الخيارات بالوزن نفسه. ومستشار بشري متاح في كل خطوة.</span><span data-l lang="en">An Arabic genetic counselling session: what the result means, how it is inherited, every option given equal weight. A human counsellor is available at every step.</span></p></div>
+      <div class="step"><span class="hex">03</span><h3 class="t-h3"><span data-l lang="ar">تُدعى أسرتك بخصوصية</span><span data-l lang="en">Your family is invited, privately</span></h3><p class="muted"><span data-l lang="ar">أقاربك المعنيّون تصلهم دعوة رسمية لفحص مجاني، لا تذكر اسمك ولا أنك أجريت فحصًا.</span><span data-l lang="en">The relatives concerned receive an official invitation for a free test that never mentions your name or that you were tested.</span></p></div>
+      <div class="step"><span class="hex">04</span><h3 class="t-h3"><span data-l lang="ar">تحجز وتُتابَع</span><span data-l lang="en">You book and are followed up</span></h3><p class="muted"><span data-l lang="ar">مواعيد الفحص التأكيدي والاستشارة عبر صحتي، وتذكيرات، ونتائج خاصة بكل شخص.</span><span data-l lang="en">Confirmatory testing and counselling appointments through Sehhaty, reminders, and results that stay private to each person.</span></p></div>
+    </div>
+    <div class="row" style="margin-top:40px"><a class="btn" href="how-it-works.html"><span data-l lang="ar">التفاصيل الكاملة للمسار</span><span data-l lang="en">The full pathway</span><i data-icon="arrow" class="flip-rtl"></i></a></div>
+  </div>
+</section>
+
+<!-- AUDIENCES -->
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><span data-l lang="ar">لمن صُمّمت</span><span data-l lang="en">Who it is for</span></span>
+      <h2 class="t-h1"><span data-l lang="ar">منصة واحدة، وثلاث مساحات</span><span data-l lang="en">One platform, three spaces</span></h2>
+    </div>
+    <div class="grid-3">
+      <a class="card aud-card" href="families.html">
+        <span class="ic"><i data-icon="family"></i></span>
+        <h3 class="t-h3"><span data-l lang="ar">الأفراد والأسر</span><span data-l lang="en">Individuals and families</span></h3>
+        <ul class="bp">
+          <li><span data-l lang="ar">فهم النتيجة بلغة بسيطة</span><span data-l lang="en">Understand your result in plain words</span></li>
+          <li><span data-l lang="ar">جلسة استشارة غير توجيهية</span><span data-l lang="en">A non-directive counselling session</span></li>
+          <li><span data-l lang="ar">دعوة أقاربك للفحص دون ذكر اسمك</span><span data-l lang="en">Relatives invited to test without your name</span></li>
+        </ul>
+        <span class="card-foot"><span data-l lang="ar">للأفراد والأسر</span><span data-l lang="en">For families</span><i data-icon="arrow" class="flip-rtl"></i></span>
+      </a>
+      <a class="card aud-card" href="professionals.html">
+        <span class="ic"><i data-icon="stethoscope"></i></span>
+        <h3 class="t-h3"><span data-l lang="ar">الممارسون الصحيون</span><span data-l lang="en">Clinicians and counsellors</span></h3>
+        <ul class="bp">
+          <li><span data-l lang="ar">تولّي الشرح المتكرر، وإحالة الحالات المعقّدة</span><span data-l lang="en">Routine explanation handled, complex cases referred</span></li><li><span data-l lang="ar">قراءة النتيجة وفق مؤشرات منشورة</span><span data-l lang="en">Results read against published indices</span></li>
+          <li><span data-l lang="ar">قائمة فرز للحالات المعقّدة</span><span data-l lang="en">A triage queue for complex cases</span></li>
+          
+        </ul>
+        <span class="card-foot"><span data-l lang="ar">للممارسين</span><span data-l lang="en">For clinicians</span><i data-icon="arrow" class="flip-rtl"></i></span>
+      </a>
+      <a class="card aud-card" href="authorities.html">
+        <span class="ic"><i data-icon="building"></i></span>
+        <h3 class="t-h3"><span data-l lang="ar">الجهات الصحية</span><span data-l lang="en">Health authorities</span></h3>
+        <ul class="bp">
+          <li><span data-l lang="ar">مؤشرات أثر برامج الفحص</span><span data-l lang="en">Impact indicators for screening programmes</span></li>
+          <li><span data-l lang="ar">توزيع المستشارين ومسارات الإحالة</span><span data-l lang="en">Counsellor allocation and referral routes</span></li>
+          <li><span data-l lang="ar">حوكمة المحتوى السريري والبيانات</span><span data-l lang="en">Governance of clinical content and data</span></li>
+        </ul>
+        <span class="card-foot"><span data-l lang="ar">للجهات الصحية</span><span data-l lang="en">For health authorities</span><i data-icon="arrow" class="flip-rtl"></i></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PRINCIPLES -->
+<section class="band sunken">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><span data-l lang="ar">مبادئنا</span><span data-l lang="en">Our principles</span></span>
+      <h2 class="t-h1"><span data-l lang="ar">الثقة جزء من التصميم، لا ملحق به</span><span data-l lang="en">Trust is designed in, not added on</span></h2>
+    </div>
+    <div class="principles">
+      <div class="principle"><i data-icon="scale"></i><h3 class="t-h3"><span data-l lang="ar">غير توجيهية</span><span data-l lang="en">Non-directive</span></h3><p class="muted"><span data-l lang="ar">لا نوصي بالزواج أو عدمه، ولا بالفحص أو عدمه. نعرض كل الخيارات بالوزن نفسه والقرار لك.</span><span data-l lang="en">We never recommend marrying or not, testing or not. Every option is shown with equal weight, and the decision is yours.</span></p></div>
+      <div class="principle"><i data-icon="family"></i><h3 class="t-h3"><span data-l lang="ar">نتيجتك لك وحدك</span><span data-l lang="en">Your result is yours alone</span></h3><p class="muted"><span data-l lang="ar">لا يرى أقاربك نتيجتك ولا ترى نتائجهم، والدعوة الرسمية لا تذكر اسمك أبدًا.</span><span data-l lang="en">Your relatives never see your result and you never see theirs, and the official invitation never names you.</span></p></div>
+      <div class="principle"><i data-icon="privacy"></i><h3 class="t-h3"><span data-l lang="ar">صفة الحمل فقط</span><span data-l lang="en">Carrier status only</span></h3><p class="muted"><span data-l lang="ar">نحفظ «حامل / غير حامل / غير معروف»، ولا نحفظ بيانات جينومية خام.</span><span data-l lang="en">We store “carrier / not a carrier / unknown”, never raw genomic data.</span></p></div>
+      <div class="principle"><i data-icon="lock"></i><h3 class="t-h3"><span data-l lang="ar">داخل المملكة</span><span data-l lang="en">Hosted in the Kingdom</span></h3><p class="muted"><span data-l lang="ar">النتائج محفوظة في قواعد بيانات وزارة الصحة داخل المملكة، ووفق نظام حماية البيانات الشخصية.</span><span data-l lang="en">Results are kept in Ministry of Health databases inside Saudi Arabia, under the Personal Data Protection Law.</span></p></div>
+      <div class="principle"><i data-icon="phone"></i><h3 class="t-h3"><span data-l lang="ar">إنسانٌ على بُعد لمسة</span><span data-l lang="en">A person, one tap away</span></h3><p class="muted"><span data-l lang="ar">في كل شاشة زر للتحدث مع مستشار وراثي بشري.</span><span data-l lang="en">Every screen has a button to talk to a human genetic counsellor.</span></p></div>
+      <div class="principle"><i data-icon="mosque"></i><h3 class="t-h3"><span data-l lang="ar">الأسئلة الشرعية لأهلها</span><span data-l lang="en">Religious questions go to scholars</span></h3><p class="muted"><span data-l lang="ar">لا يجيب النظام عن الأسئلة الشرعية، ويحيلها إلى جهات الفتوى المختصة.</span><span data-l lang="en">The system does not answer religious questions; it refers them to qualified scholars.</span></p></div>
+    </div>
+    <div class="row" style="margin-top:32px"><a class="btn" href="privacy.html"><span data-l lang="ar">الخصوصية والأخلاقيات</span><span data-l lang="en">Privacy and ethics</span><i data-icon="arrow" class="flip-rtl"></i></a></div>
+  </div>
+</section>
+
+<!-- ALIGNMENT -->
+<section class="band" data-theme="dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><span data-l lang="ar">التوافق الوطني</span><span data-l lang="en">National alignment</span></span>
+      <h2 class="t-h1"><span data-l lang="ar">مبنيّة لتخدم أهدافًا وطنية قائمة</span><span data-l lang="en">Built to serve national goals that already exist</span></h2>
+      <p class="t-lead" style="color:#C9D6C4"><span data-l lang="ar">لا تُنشئ سمات برنامج فحص جديدًا. هي طبقة رقمية لما بعد النتيجة، فوق برامج تموّلها الدولة اليوم.</span><span data-l lang="en">SIMAT does not create a new screening programme. It is a digital layer for what happens after the result, on top of programmes the state already funds.</span></p>
+    </div>
+    <div class="grid-3">
+      <div class="align-col"><span class="who"><span data-l lang="ar">رؤية 2030 · برنامج تحول القطاع الصحي</span><span data-l lang="en">Vision 2030 · Health Sector Transformation</span></span><h3 class="t-h3"><span data-l lang="ar">برنامج الجينوم السعودي</span><span data-l lang="en">Saudi Genome Program</span></h3><p class="how"><span data-l lang="ar">هدفه الحد من الأمراض الوراثية. سمات تحوّل نتائج الفحص إلى قرارات أسرية مستنيرة وفحصٍ للأقارب، وتنتج بيانات نتائج مُجمَّعة غير معرِّفة.</span><span data-l lang="en">Its goal is to reduce the incidence of genetic disease. SIMAT turns screening results into informed family decisions and relative testing, and produces aggregated, de-identified outcome data.</span></p></div>
+      <div class="align-col"><span class="who"><span data-l lang="ar">وزارة الصحة · إلزامي منذ 2004</span><span data-l lang="en">Ministry of Health · mandatory since 2004</span></span><h3 class="t-h3"><span data-l lang="ar">برنامج الزواج الصحي</span><span data-l lang="en">Healthy Marriage Program</span></h3><p class="how"><span data-l lang="ar">يفحص المقبلين على الزواج ويقدّم الاستشارة. سمات تمدّ الاستشارة إلى ما بعد الشهادة، وتتيحها لكل من لديه سؤال عن نتيجة فحصه الوراثي، وتصل إلى أقارب كل حامل للصفة.</span><span data-l lang="en">It screens people before marriage and offers counselling. SIMAT extends counselling beyond the certificate, opens it to anyone with a question about their genetic test result, and reaches the relatives of every carrier.</span></p></div>
+      <div class="align-col"><span class="who"><span data-l lang="ar">وزارة الصحة · منذ 2005</span><span data-l lang="en">Ministry of Health · since 2005</span></span><h3 class="t-h3"><span data-l lang="ar">برنامج فحص حديثي الولادة</span><span data-l lang="en">Newborn Screening Program</span></h3><p class="how"><span data-l lang="ar">يفحص المواليد لاضطرابات من بينها فقر الدم المنجلي والثلاسيميا. سمات تمنح نتيجة الصفة لدى المولود مسارًا للأسرة.</span><span data-l lang="en">It screens newborns for disorders including sickle cell disease and thalassaemia. SIMAT gives a newborn’s trait result a pathway for the family.</span></p></div>
+    </div>
+    <p class="t-cap" style="margin-top:28px;color:#9AAA95"><span data-l lang="ar">سمات برنامج وطني مقترح من فريق طلابي، ولا يتبع لأي من هذه البرامج ولا يتحدث باسمها.</span><span data-l lang="en">SIMAT is a proposal by a student team. It is not affiliated with any of these programmes and does not speak for them.</span></p>
+  </div>
+</section>
+
+<!-- CONDITIONS -->
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><span data-l lang="ar">الحالات المشمولة</span><span data-l lang="en">Conditions covered</span></span>
+      <h2 class="t-h1"><span data-l lang="ar">نبدأ بأكثر ما تكشفه نتائج الفحص</span><span data-l lang="en">We start with what screening finds most</span></h2>
+      <p class="t-lead"><span data-l lang="ar">كل حالة في سمات تعمل وفق دليل سريري مُراجَع: نمط الوراثة، والفحص التأكيدي، ومن يُدعى من الأسرة، ومحتوى الاستشارة، ومعايير الرعاية.</span><span data-l lang="en">Every condition in SIMAT runs on a reviewed clinical rulebook: inheritance pattern, confirmatory test, who in the family is invited, counselling content, and care standards.</span></p>
+    </div>
+    <div class="grid-2">
+      <a class="card cond-card" href="conditions.html#beta-thal">
+        <span class="tag live"><i data-icon="check" style="width:14px;height:14px"></i><span data-l lang="ar">مشمولة الآن</span><span data-l lang="en">Covered now</span></span>
+        <h3 class="t-h2"><span data-l lang="ar">الثلاسيميا بيتا</span><span data-l lang="en">β-thalassaemia</span></h3>
+        <p class="muted"><span data-l lang="ar">اضطراب وراثي متنحٍّ يقلّل إنتاج الهيموغلوبين. الحامل للصفة سليم غالبًا، وإذا كان الوالدان حاملين فاحتمال إصابة كل طفل 1 من 4.</span><span data-l lang="en">An autosomal recessive disorder that reduces haemoglobin production. Carriers are usually healthy; when both parents carry it, each child has a 1 in 4 chance of being affected.</span></p>
+        <img src="assets/img/helix-long.webp" alt="" class="float slow">
+      </a>
+      <a class="card cond-card" href="conditions.html#sickle-cell">
+        <span class="tag live"><i data-icon="check" style="width:14px;height:14px"></i><span data-l lang="ar">مشمولة الآن</span><span data-l lang="en">Covered now</span></span>
+        <h3 class="t-h2"><span data-l lang="ar">فقر الدم المنجلي</span><span data-l lang="en">Sickle cell disease</span></h3>
+        <p class="muted"><span data-l lang="ar">أكثر النتائج غير الطبيعية شيوعًا في الفحص قبل الزواج: 78.5% منها تتعلق بالهيموغلوبين S. يُورَّث بالنمط المتنحي نفسه.</span><span data-l lang="en">The most common abnormal premarital finding: 78.5% of abnormal results involve haemoglobin S. It follows the same recessive inheritance.</span></p>
+        <img src="assets/img/hex-cell-gold.webp" alt="" class="float d1">
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- DEMO -->
+<section class="band" data-theme="dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><span data-l lang="ar">جرّبها</span><span data-l lang="en">Try it</span></span>
+      <h2 class="t-h1"><span data-l lang="ar">ثلاث منصات، أسرة واحدة</span><span data-l lang="en">Three platforms, one family</span></h2>
+      <p class="t-lead" style="color:#C9D6C4"><span data-l lang="ar">النماذج التالية تعمل على أسرة افتراضية واحدة. لا شيء يُرسَل، ولا بيانات حقيقية.</span><span data-l lang="en">The demos below run on one fictional family. Nothing is sent and no real data is used.</span></p>
+    </div>
+    <div class="grid-3">
+      <a class="demo-tile" href="portal.html"><i data-icon="user" class="big"></i><h3 class="t-h3" style="color:#fff"><span data-l lang="ar">بوابة المستفيد</span><span data-l lang="en">My SIMAT</span></h3><p style="color:#C9D6C4"><span data-l lang="ar">النتيجة، وجلسة الاستشارة، وشجرة الأسرة، والمواعيد، من جهة المستفيد.</span><span data-l lang="en">The result, the counselling session, the family tree and appointments, as the person sees them.</span></p><span class="go"><span data-l lang="ar">افتح البوابة</span><span data-l lang="en">Open the portal</span><i data-icon="arrow" class="flip-rtl"></i></span></a>
+      <a class="demo-tile" href="console.html"><i data-icon="grid" class="big"></i><h3 class="t-h3" style="color:#fff"><span data-l lang="ar">لوحة الجهة المشرفة</span><span data-l lang="en">Authority console</span></h3><p style="color:#C9D6C4"><span data-l lang="ar">المؤشرات الوطنية، والمناطق، وقوائم الاستشارة، والأدلة السريرية، والخصوصية.</span><span data-l lang="en">National indicators, regions, counselling queues, clinical rulebooks and privacy controls.</span></p><span class="go"><span data-l lang="ar">افتح اللوحة</span><span data-l lang="en">Open the console</span><i data-icon="arrow" class="flip-rtl"></i></span></a>
+      <a class="demo-tile" href="clinical.html"><i data-icon="stethoscope" class="big"></i><h3 class="t-h3" style="color:#fff"><span data-l lang="ar">مساحة العمل السريرية</span><span data-l lang="en">Clinical workspace</span></h3><p style="color:#C9D6C4"><span data-l lang="ar">قراءة النتيجة، وفحص الأسرة، ومعايير الرعاية، من جهة الطبيب.</span><span data-l lang="en">Result reading, family screening and care checks, as the clinician sees them.</span></p><span class="go"><span data-l lang="ar">افتح مساحة العمل</span><span data-l lang="en">Open the workspace</span><i data-icon="arrow" class="flip-rtl"></i></span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer id="site-footer"></footer>
+<script src="js/icons.js"></script>
+<script src="js/core.js"></script>
+<script src="js/tour-steps.js"></script>
+<script src="js/tour-engine.js"></script>
+
+</body>
+</html>

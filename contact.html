@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-lang="ar">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SIMAT · Contact</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="simat-title-ar" content="سمات · تواصل معنا">
+<meta name="simat-title-en" content="SIMAT · Contact">
+<link rel="icon" href="assets/logo/simat-favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/tour.css">
+<style>
+  [hidden] { display: none !important; }
+  .page-hero .wrap > * { max-width: 760px; }
+  .page-hero h1 { color: #fff; }
+  .page-hero .art.tall { width: min(190px, 16vw); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 999px; border: 1.5px solid #FFFFFF4D; color: #fff; text-decoration: none; font-weight: 600; font-size: 15px; }
+  .chip:hover { background: #FFFFFF14; }
+  .chip svg { width: 16px; height: 16px; }
+  .band .split .art-side { justify-self: center; width: min(420px, 100%); }
+  .cta-band .wrap { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center; }
+  .cta-band h2 { color: #fff; max-width: 640px; }
+  .sim-note { display: inline-flex; gap: 6px; align-items: center; font-size: 13px; color: var(--ink-muted); }
+  .sim-note svg { width: 15px; height: 15px; }
+
+  .contact { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 40px; align-items: start; }
+  @media (max-width: 900px) { .contact { grid-template-columns: 1fr; } }
+  form.card { gap: 18px; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 560px) { .two { grid-template-columns: 1fr; } }
+  .done { border: 2px solid var(--teal-ink); }
+  .email { font-family: var(--font-mono); direction: ltr; unicode-bidi: isolate; user-select: all; background: var(--surface-sunken); padding: 8px 12px; border-radius: var(--radius-sm); display: inline-block; }
+</style>
+</head>
+<body data-theme="light">
+<div id="site-header" data-page="contact.html"></div>
+<main id="main">
+<section class="page-hero" data-theme="dark">
+  
+  <div class="wrap">
+    <nav class="crumbs" aria-label="breadcrumb"><a href="index.html"><span data-l lang="ar">الرئيسية</span><span data-l lang="en">Home</span></a><span aria-hidden="true">/</span><span><span data-l lang="ar">تواصل معنا</span><span data-l lang="en">Contact</span></span></nav>
+    <span class="kicker"><span data-l lang="ar">تواصل معنا</span><span data-l lang="en">Contact us</span></span>
+    <h1 class="t-h1 baseline"><span data-l lang="ar">نسعد بسماع رأيك</span><span data-l lang="en">We would like to hear from you</span></h1>
+    <p class="t-lead"><span data-l lang="ar">سواء كنت فردًا أو ممارسًا صحيًا أو تمثّل جهة صحية، اكتب لنا عن سمات.</span><span data-l lang="en">Whether you are an individual, a clinician or represent a health authority, write to us about SIMAT.</span></p>
+    
+  </div>
+</section>
+<section class="band">
+  <div class="wrap contact">
+    <form class="card" id="contact-form" novalidate>
+      <h2 class="t-h2"><span data-l lang="ar">أرسل رسالة</span><span data-l lang="en">Send a message</span></h2>
+      <div class="two">
+        <div class="field"><label for="cf-name"><span data-l lang="ar">الاسم</span><span data-l lang="en">Name</span></label><input class="input" id="cf-name" name="name" required data-ph-ar="اسمك" data-ph-en="Your name"></div>
+        <div class="field"><label for="cf-email"><span data-l lang="ar">البريد الإلكتروني</span><span data-l lang="en">Email</span></label><input class="input" id="cf-email" name="email" type="email" required dir="ltr" data-ph-ar="name@example.com" data-ph-en="name@example.com"></div>
+      </div>
+      <div class="field"><label for="cf-role"><span data-l lang="ar">أنا</span><span data-l lang="en">I am</span></label>
+        <select class="input" id="cf-role" name="role">
+          <option value="person" data-ar="فرد أو أسرة" data-en="An individual or family">فرد أو أسرة</option>
+          <option value="clinician" data-ar="ممارس صحي أو مستشار وراثي" data-en="A clinician or genetic counsellor">ممارس صحي أو مستشار وراثي</option>
+          <option value="authority" data-ar="أمثّل جهة صحية" data-en="I represent a health authority">أمثّل جهة صحية</option>
+          <option value="judge" data-ar="محكّم أو مرشد في MEDATHON" data-en="A MEDATHON judge or mentor">محكّم أو مرشد في MEDATHON</option>
+          <option value="other" data-ar="غير ذلك" data-en="Other">غير ذلك</option>
+        </select></div>
+      <div class="field"><label for="cf-msg"><span data-l lang="ar">رسالتك</span><span data-l lang="en">Your message</span></label><textarea class="input" id="cf-msg" name="message" required data-ph-ar="اكتب رسالتك هنا" data-ph-en="Write your message here"></textarea></div>
+      <p class="t-cap" id="cf-err" hidden><span data-l lang="ar">يرجى تعبئة الاسم والبريد الإلكتروني والرسالة.</span><span data-l lang="en">Please fill in your name, email and message.</span></p>
+      <div class="row"><button class="btn btn-primary" type="submit"><i data-icon="send"></i><span data-l lang="ar">إرسال</span><span data-l lang="en">Send</span></button></div>
+    </form>
+    <div class="card done" id="cf-done" hidden>
+      <span class="ic"><i data-icon="check"></i></span>
+      <h2 class="t-h2"><span data-l lang="ar">شكرًا لك</span><span data-l lang="en">Thank you</span></h2>
+      <p><span data-l lang="ar">هذا نموذج عرض، ولم تُرسل رسالتك إلى أي جهة. للتواصل الفعلي استخدم بريد الفريق الظاهر بجانب النموذج.</span><span data-l lang="en">This is a demonstration, so your message was not sent anywhere. To reach us, use the team email shown beside the form.</span></p>
+      <div class="row"><button class="btn" type="button" id="cf-again"><span data-l lang="ar">كتابة رسالة أخرى</span><span data-l lang="en">Write another message</span></button></div>
+    </div>
+    <aside class="stack">
+      <div class="card">
+        <h3 class="t-h3"><span data-l lang="ar">بريد الفريق</span><span data-l lang="en">Team email</span></h3>
+        <span class="email">[team email]</span>
+        <p class="muted t-small"><span data-l lang="ar">سيُضاف البريد الفعلي قبل العرض.</span><span data-l lang="en">The real address will be added before the presentation.</span></p>
+      </div>
+      <div class="card">
+        <h3 class="t-h3"><span data-l lang="ar">عن المشاركة</span><span data-l lang="en">About our entry</span></h3>
+        <p class="muted"><span data-l lang="ar">سمات مشاركة في MEDATHON، الهاكاثون الصحي ضمن الملتقى السعودي الشبابي للرعاية الصحية 2026، في المسار الثاني: التحول الرقمي.</span><span data-l lang="en">SIMAT is an entry in MEDATHON, the healthcare hackathon of the Saudi Youth Healthcare Forum 2026, in Track 2: Digital Transformation.</span></p>
+      </div>
+      <div class="note"><i data-icon="alert"></i><p class="t-small"><span data-l lang="ar">لا تكتب في الرسالة أي معلومات صحية خاصة بك أو بغيرك.</span><span data-l lang="en">Do not include any personal health information about yourself or anyone else.</span></p></div>
+    </aside>
+  </div>
+</section>
+
+</main>
+<footer id="site-footer"></footer>
+<script src="js/icons.js"></script>
+<script src="js/core.js"></script>
+<script>
+(function () {
+  function syncOptions() { var l = (window.SIMAT && SIMAT.lang()) || 'ar'; document.querySelectorAll('#cf-role option').forEach(function (o) { o.textContent = o.getAttribute('data-' + l); }); }
+  document.addEventListener('simat:lang', syncOptions); syncOptions();
+  var f = document.getElementById('contact-form'), done = document.getElementById('cf-done'), err = document.getElementById('cf-err');
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var ok = ['cf-name', 'cf-email', 'cf-msg'].every(function (id) { return document.getElementById(id).value.trim(); });
+    err.hidden = ok; if (!ok) return;
+    f.hidden = true; done.hidden = false; done.querySelector('h2').setAttribute('tabindex', '-1'); done.querySelector('h2').focus();
+  });
+  document.getElementById('cf-again').addEventListener('click', function () { f.reset(); done.hidden = true; f.hidden = false; document.getElementById('cf-name').focus(); });
+})();
+</script>
+<script src="js/tour-steps.js"></script>
+<script src="js/tour-engine.js"></script>
+</body>
+</html>

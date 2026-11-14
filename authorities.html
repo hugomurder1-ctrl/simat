@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-lang="ar">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SIMAT · For health authorities</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="simat-title-ar" content="سمات · للجهات الصحية">
+<meta name="simat-title-en" content="SIMAT · For health authorities">
+<link rel="icon" href="assets/logo/simat-favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/tour.css">
+<style>
+  [hidden] { display: none !important; }
+  .page-hero .wrap > * { max-width: 760px; }
+  .page-hero h1 { color: #fff; }
+  .page-hero .art.tall { width: min(190px, 16vw); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 999px; border: 1.5px solid #FFFFFF4D; color: #fff; text-decoration: none; font-weight: 600; font-size: 15px; }
+  .chip:hover { background: #FFFFFF14; }
+  .chip svg { width: 16px; height: 16px; }
+  .band .split .art-side { justify-self: center; width: min(420px, 100%); }
+  .cta-band .wrap { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center; }
+  .cta-band h2 { color: #fff; max-width: 640px; }
+  .sim-note { display: inline-flex; gap: 6px; align-items: center; font-size: 13px; color: var(--ink-muted); }
+  .sim-note svg { width: 15px; height: 15px; }
+
+
+  .gains { gap: 20px; }
+  .gain { padding: 28px; display: flex; flex-direction: column; gap: 12px; }
+  .gain-top { display: flex; gap: 14px; align-items: center; }
+  .gain-top .ic { flex: none; }
+  .gain h3 { font-size: 21px; margin: 0; }
+  .gain .muted { font-size: 16px; line-height: 1.8; margin: 0; }
+  .gain-tools { margin-top: auto; padding-top: 14px; border-top: 1px solid var(--line); display: grid; gap: 8px; }
+  .gain-lbl { font-size: 13px; font-weight: 700; color: var(--ink-muted); }
+  .gain-tools ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .gain-tools li { font-size: 13.5px; font-weight: 600; padding: 5px 12px; border-radius: 999px; background: var(--surface-sunken); color: var(--ink); }
+  .feat { padding: 24px; gap: 10px; }
+  .feat h3 { font-size: 18px; }
+  :root[data-lang="ar"] .feat h3 { font-size: 19px; }
+  .feat p { font-size: 15px; }
+  .ind-list { display: grid; gap: 0; border-top: 1px solid #FFFFFF24; }
+  .ind { display: grid; grid-template-columns: 56px minmax(0, 1.1fr) minmax(0, 1.4fr); gap: 20px; padding: 22px 0; border-bottom: 1px solid #FFFFFF24; align-items: start; }
+  .ind .hex { --hex: 44px; }
+  .ind h3 { color: #fff; font-size: 19px; }
+  .ind p { color: #C9D6C4; }
+  @media (max-width: 760px) { .ind { grid-template-columns: 44px minmax(0, 1fr); } .ind p { grid-column: 2; } }
+  .preview { background: var(--surface-raised); border: 1px solid var(--line); border-radius: var(--radius-md); box-shadow: var(--elevation-3); overflow: hidden; color: var(--ink); text-decoration: none; display: block; transition: transform .2s, box-shadow .2s; }
+  .preview:hover { transform: translateY(-3px); }
+  .preview .bar { display: flex; justify-content: space-between; gap: 10px; align-items: center; padding: 12px 18px; background: #0A2700; color: #fff; font-size: 14px; font-weight: 600; }
+  .preview .bar .tag { border-color: #FFFFFF59; color: #DCE6D8; }
+  .preview .in { padding: 22px; display: grid; gap: 18px; }
+  .funnel { display: grid; gap: 8px; }
+  .funnel .f { display: grid; grid-template-columns: minmax(0, 150px) 1fr; gap: 12px; align-items: center; font-size: 14px; }
+  .funnel .f b { height: 22px; border-radius: 4px; background: var(--genome-green); display: block; }
+  .funnel .f:nth-child(2) b { background: #2F4B25; } .funnel .f:nth-child(3) b { background: var(--teal-ink); } .funnel .f:nth-child(4) b { background: var(--gold-mark); }
+  .hexmap { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; max-width: 320px; }
+  .hexmap span { aspect-ratio: 1 / 1.1547; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); background: var(--surface-sunken); }
+  .hexmap span.a { background: var(--teal-ink); opacity: .55; } .hexmap span.b { background: var(--genome-green); opacity: .8; } .hexmap span.c { background: var(--gold-mark); opacity: .7; }
+</style>
+</head>
+<body data-theme="light">
+<div id="site-header" data-page="authorities.html"></div>
+<main id="main">
+<section class="page-hero" data-theme="dark">
+  <img class="art" src="assets/img/roof.webp" alt="" aria-hidden="true">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="breadcrumb"><a href="index.html"><span data-l lang="ar">الرئيسية</span><span data-l lang="en">Home</span></a><span aria-hidden="true">/</span><span><span data-l lang="ar">للجهات الصحية</span><span data-l lang="en">Health authorities</span></span></nav>
+    <span class="kicker"><span data-l lang="ar">للجهات الصحية</span><span data-l lang="en">For health authorities</span></span>
+    <h1 class="t-h1 baseline"><span data-l lang="ar">رؤية وطنية لما بعد نتيجة الفحص</span><span data-l lang="en">A national view of what happens after the screening result</span></h1>
+    <p class="t-lead"><span data-l lang="ar">لوزارة الصحة والتجمّعات الصحية وشركاء البرامج الوطنية: رؤية لما بعد نتائج الفحوص التي تموّلها الدولة: أين تصل النتائج، ومن يُستشار، ومن يُفحص من الأسر، وأين يتعطّل المسار.</span><span data-l lang="en">For the Ministry of Health, health clusters and national programme partners: a view of what follows state-funded screening results: where results go, who is counselled, which family members are tested, and where the pathway breaks.</span></p>
+    
+  </div>
+</section>
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><span data-l lang="ar">ما تقدّمه اللوحة</span><span data-l lang="en">What the console provides</span></span>
+      <h2 class="t-h1"><span data-l lang="ar">أربع قدرات في لوحة واحدة</span><span data-l lang="en">Four capabilities in one console</span></h2>
+      <p class="t-lead"><span data-l lang="ar">قياس الأثر، وتوزيع الموارد، والحوكمة السريرية، والخصوصية والامتثال.</span><span data-l lang="en">Measuring impact, resource allocation, clinical governance, and privacy and compliance.</span></p>
+    </div>
+    <div class="grid-2 gains"><article class="card gain"><div class="gain-top"><span class="ic"><i data-icon="chart"></i></span><h3><span data-l lang="ar">قياس الأثر</span><span data-l lang="en">Measuring impact</span></h3></div><p class="muted"><span data-l lang="ar">المسار لكل منطقة وتجمّع صحي، من وصول النتيجة إلى فحص الأقارب، مقارنةً بخط الأساس، مع مواضع انقطاع المسار.</span><span data-l lang="en">The pathway for each region and health cluster, from the result arriving to relatives being tested, against a baseline, including where the pathway breaks.</span></p><div class="gain-tools"><span class="gain-lbl"><span data-l lang="ar">في اللوحة</span><span data-l lang="en">In the console</span></span><ul><li><span data-l lang="ar">مؤشرات وطنية وإقليمية</span><span data-l lang="en">National and regional indicators</span></li><li><span data-l lang="ar">قمع فحص الأسرة حسب درجة القرابة</span><span data-l lang="en">Family testing funnel by kinship</span></li></ul></div></article><article class="card gain"><div class="gain-top"><span class="ic"><i data-icon="clock"></i></span><h3><span data-l lang="ar">توزيع الموارد</span><span data-l lang="en">Resource allocation</span></h3></div><p class="muted"><span data-l lang="ar">عبء العمل لكل مستشار، والحالات المتأخرة عن المدة المستهدفة، وقدرات كل منشأة ومسارات الإحالة إليها.</span><span data-l lang="en">Workload per counsellor, cases past their target time, and each facility’s capability and referral routes.</span></p><div class="gain-tools"><span class="gain-lbl"><span data-l lang="ar">في اللوحة</span><span data-l lang="en">In the console</span></span><ul><li><span data-l lang="ar">سعة الاستشارة ومدد الاستجابة</span><span data-l lang="en">Counselling capacity and response times</span></li><li><span data-l lang="ar">قدرات المنشآت ومسارات الإحالة</span><span data-l lang="en">Facility capability and referral routes</span></li></ul></div></article><article class="card gain"><div class="gain-top"><span class="ic"><i data-icon="layers"></i></span><h3><span data-l lang="ar">الحوكمة السريرية</span><span data-l lang="en">Clinical governance</span></h3></div><p class="muted"><span data-l lang="ar">لا تُفعَّل حالة ولا يُنشر نص قبل اعتماد مالك البرنامج، وكل تعديل مُرقَّم ومسجَّل. وتُضاف أي حالة أو فحص جديد بدليل سريري جديد، دون تغيير في النظام.</span><span data-l lang="en">No condition goes live and no text is published before the programme owner approves it, and every change is versioned and logged. A new condition or test is added through a new rulebook, with no change to the system.</span></p><div class="gain-tools"><span class="gain-lbl"><span data-l lang="ar">في اللوحة</span><span data-l lang="en">In the console</span></span><ul><li><span data-l lang="ar">أدلة سريرية مُرقَّمة الإصدار</span><span data-l lang="en">Versioned clinical rulebooks</span></li><li><span data-l lang="ar">اعتماد نصوص الاستشارة والرسائل</span><span data-l lang="en">Approval of counselling texts and messages</span></li></ul></div></article><article class="card gain"><div class="gain-top"><span class="ic"><i data-icon="privacy"></i></span><h3><span data-l lang="ar">الخصوصية والامتثال</span><span data-l lang="en">Privacy and compliance</span></h3></div><p class="muted"><span data-l lang="ar">مصمَّمة وفق نظام حماية البيانات الشخصية: البيانات داخل المملكة، وسجل لكل وصول وموافقة وطلب حذف، وتقارير مُجمَّعة للبرامج الوطنية بلا أسماء ولا بيانات جينومية.</span><span data-l lang="en">Designed around the Personal Data Protection Law: data stays in the Kingdom, every access, consent and deletion request is logged, and aggregated reports to national programmes carry no names and no genomic data.</span></p><div class="gain-tools"><span class="gain-lbl"><span data-l lang="ar">في اللوحة</span><span data-l lang="en">In the console</span></span><ul><li><span data-l lang="ar">سجل الوصول والموافقات</span><span data-l lang="en">Access and consent log</span></li><li><span data-l lang="ar">تقارير مُجمَّعة غير معرِّفة</span><span data-l lang="en">Aggregated, de-identified reports</span></li></ul></div></article></div>
+  </div>
+</section>
+
+<section class="band" data-theme="dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><span data-l lang="ar">المؤشرات</span><span data-l lang="en">Indicators</span></span>
+      <h2 class="t-h1"><span data-l lang="ar">نقيس جودة القرار، لا اتجاهه</span><span data-l lang="en">We measure the quality of a decision, not its direction</span></h2>
+      <p class="t-lead" style="color:#C9D6C4"><span data-l lang="ar">خمسة مؤشرات أداء للمتابعة الدورية والتقارير، تقيس مدى تحقيق البرنامج لغايته.</span><span data-l lang="en">Five performance indicators for routine monitoring and reporting, measuring how far the programme achieves its purpose.</span></p>
+    </div>
+    <div class="ind-list"><div class="ind"><span class="hex">01</span><h3><span data-l lang="ar">معدل القرار المستنير</span><span data-l lang="en">Informed-decision rate</span></h3><p><span data-l lang="ar">نسبة من أكملوا الاستشارة وأكّدوا أن لديهم ما يحتاجونه ليقرّروا، من بين كل من وصلتهم نتيجة.</span><span data-l lang="en">The share of people with a result who completed counselling and confirmed they have what they need to decide.</span></p></div><div class="ind"><span class="hex">02</span><h3><span data-l lang="ar">الأقارب المفحوصون خلال 90 يومًا</span><span data-l lang="en">Relatives tested within 90 days</span></h3><p><span data-l lang="ar">نسبة الأقارب المدعوّين الذين أُجري لهم الفحص خلال 90 يومًا من نتيجة الحالة الأولى.</span><span data-l lang="en">The share of invited relatives tested within 90 days of the first person’s result.</span></p></div><div class="ind"><span class="hex">03</span><h3><span data-l lang="ar">الزمن من النتيجة إلى الاستشارة</span><span data-l lang="en">Time from result to counselling</span></h3><p><span data-l lang="ar">الوسيط بالأيام بين وصول النتيجة وإكمال جلسة الاستشارة.</span><span data-l lang="en">The median number of days between the result arriving and the counselling session being completed.</span></p></div><div class="ind"><span class="hex">04</span><h3><span data-l lang="ar">طلبات التواصل البشري</span><span data-l lang="en">Requests for a human counsellor</span></h3><p><span data-l lang="ar">عدد الطلبات، والزمن حتى الرد، والحالات المتأخرة.</span><span data-l lang="en">Number of requests, time to response, and cases past target.</span></p></div><div class="ind"><span class="hex">05</span><h3><span data-l lang="ar">فحص الوالدين بعد نتيجة المولود</span><span data-l lang="en">Parents tested after a newborn result</span></h3><p><span data-l lang="ar">نسبة الأسر التي فُحص فيها الوالدان بعد نتيجة الصفة لدى المولود.</span><span data-l lang="en">The share of families in which both parents were tested after a newborn trait result.</span></p></div></div>
+    <div class="note" style="margin-top:32px"><i data-icon="scale"></i><p><span data-l lang="ar">لا تقيس سمات إلغاء الزيجات ولا تستهدفه. المنصة غير توجيهية، ونجاحها يُقاس بأن يقرّر الناس وهم يعلمون، أيًّا كان قرارهم.</span><span data-l lang="en">SIMAT does not measure or target cancelled marriages. The platform is non-directive; success means people decide with full information, whatever they decide.</span></p></div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap split">
+    <div class="stack">
+      <div class="sec-head">
+      <span class="kicker"><span data-l lang="ar">لوحة الجهة المشرفة</span><span data-l lang="en">Authority console</span></span>
+      <h2 class="t-h1"><span data-l lang="ar">جرّب اللوحة على بيانات توضيحية</span><span data-l lang="en">Try the console on illustrative data</span></h2>
+      
+    </div>
+      <p class="t-lead"><span data-l lang="ar">المؤشرات الوطنية، والخريطة الإقليمية، وقوائم الاستشارة، والأدلة السريرية، والخصوصية، في نموذج تفاعلي.</span><span data-l lang="en">National indicators, the regional map, counselling queues, clinical rulebooks and privacy, in an interactive demo.</span></p>
+      <div class="row"><a class="btn btn-primary" href="console.html"><i data-icon="grid"></i><span data-l lang="ar">افتح لوحة الجهة المشرفة</span><span data-l lang="en">Open the authority console</span></a></div>
+    </div>
+    <a class="preview" href="console.html">
+      <div class="bar"><span><span data-l lang="ar">سمات · لوحة الجهة المشرفة</span><span data-l lang="en">SIMAT · Authority console</span></span><span class="tag"><span data-l lang="ar">صورة توضيحية</span><span data-l lang="en">Illustrative</span></span></div>
+      <div class="in">
+        <span class="label"><span data-l lang="ar">قمع فحص الأسرة</span><span data-l lang="en">Family cascade</span></span>
+        <div class="funnel">
+          <div class="f"><span><span data-l lang="ar">أقارب مؤهّلون</span><span data-l lang="en">Eligible relatives</span></span><b style="width:100%"></b></div>
+          <div class="f"><span><span data-l lang="ar">دُعوا</span><span data-l lang="en">Invited</span></span><b style="width:78%"></b></div>
+          <div class="f"><span><span data-l lang="ar">حجزوا</span><span data-l lang="en">Booked</span></span><b style="width:55%"></b></div>
+          <div class="f"><span><span data-l lang="ar">فُحصوا</span><span data-l lang="en">Tested</span></span><b style="width:41%"></b></div>
+        </div>
+        <span class="label"><span data-l lang="ar">التغطية حسب المنطقة</span><span data-l lang="en">Coverage by region</span></span>
+        <div class="hexmap" aria-hidden="true"><span class="a"></span><span class="b"></span><span class=""></span><span class="c"></span><span class="a"></span><span class="b"></span><span class="a"></span><span class="b"></span><span class="c"></span><span class="a"></span><span class=""></span><span class="b"></span><span class="c"></span><span class="a"></span><span class="b"></span><span class="a"></span><span class="c"></span><span class="b"></span><span class="a"></span><span class=""></span><span class="b"></span></div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="band sunken">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><span data-l lang="ar">نموذج التطبيق</span><span data-l lang="en">Implementation model</span></span>
+      <h2 class="t-h1"><span data-l lang="ar">من تجربة إلى تغطية وطنية</span><span data-l lang="en">From pilot to national coverage</span></h2>
+      <p class="t-lead"><span data-l lang="ar">كل مرحلة تُقاس قبل التالية، ولا يبدأ التوسّع إلا بعد مراجعة نتائج التجربة.</span><span data-l lang="en">Each phase is measured before the next, and expansion begins only after the pilot results are reviewed.</span></p>
+    </div>
+    <div class="strand" style="--steps:3">
+      <div class="step"><span class="hex">01</span><h3 class="t-h3"><span data-l lang="ar">التجربة</span><span data-l lang="en">Pilot</span></h3><p class="muted"><span data-l lang="ar">تجمّع صحي واحد، وحالتان أوليان، وخط أساس للمؤشرات. الجهة تحدد المستهدفات وتعتمد الأدلة والمحتوى.</span><span data-l lang="en">One health cluster, two first conditions, and an indicator baseline. The authority sets targets and approves rulebooks and content.</span></p></div>
+      <div class="step"><span class="hex">02</span><h3 class="t-h3"><span data-l lang="ar">التوسّع</span><span data-l lang="en">Expansion</span></h3><p class="muted"><span data-l lang="ar">تجمّعات إضافية ومسار نتيجة المولود، مع شبكة مستشارين مشتركة وقوائم فرز موحّدة.</span><span data-l lang="en">More clusters and the newborn-result pathway, with a shared counsellor network and unified triage queues.</span></p></div>
+      <div class="step"><span class="hex">03</span><h3 class="t-h3"><span data-l lang="ar">التغطية الوطنية</span><span data-l lang="en">National coverage</span></h3><p class="muted"><span data-l lang="ar">كل التجمّعات، وتقارير دورية غير معرِّفة للبرامج الوطنية، وأدلة جديدة باعتماد مالك البرنامج.</span><span data-l lang="en">All clusters, regular de-identified reporting to national programmes, and new rulebooks approved by the programme owner.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><span data-l lang="ar">نقاط التكامل</span><span data-l lang="en">Integration points</span></span>
+      <h2 class="t-h1"><span data-l lang="ar">تعمل فوق الأنظمة الوطنية القائمة، لا بديلًا عنها</span><span data-l lang="en">Runs on top of existing national systems, not instead of them</span></h2>
+      <p class="t-lead"><span data-l lang="ar">كل هذه الروابط محاكاة في النموذج التجريبي. التكامل الفعلي يتطلب موافقة الجهات المالكة لكل نظام.</span><span data-l lang="en">Every one of these connections is simulated in the demo. Real integration requires approval from the owner of each system.</span></p>
+    </div>
+    <div class="grid-3"><div class="card"><span class="ic"><i data-icon="appointment"></i></span><h3 class="t-h3"><span data-l lang="ar">صحتي</span><span data-l lang="en">Sehhaty</span></h3><p class="muted"><span data-l lang="ar">حجز الفحوص والاستشارات والتذكيرات.</span><span data-l lang="en">Booking tests and counselling, with reminders.</span></p><span class="tag sim"><span data-l lang="ar">محاكاة في النموذج</span><span data-l lang="en">Simulated in the demo</span></span></div><div class="card"><span class="ic"><i data-icon="user"></i></span><h3 class="t-h3"><span data-l lang="ar">نفاذ</span><span data-l lang="en">Nafath</span></h3><p class="muted"><span data-l lang="ar">دخول المستفيد بالهوية الوطنية الرقمية.</span><span data-l lang="en">Sign-in with the national digital identity.</span></p><span class="tag sim"><span data-l lang="ar">محاكاة في النموذج</span><span data-l lang="en">Simulated in the demo</span></span></div><div class="card"><span class="ic"><i data-icon="connect"></i></span><h3 class="t-h3"><span data-l lang="ar">منصة نفيس</span><span data-l lang="en">NPHIES</span></h3><p class="muted"><span data-l lang="ar">الإحالات والمطالبات بين المنشآت.</span><span data-l lang="en">Referrals and claims between facilities.</span></p><span class="tag sim"><span data-l lang="ar">محاكاة في النموذج</span><span data-l lang="en">Simulated in the demo</span></span></div><div class="card"><span class="ic"><i data-icon="sample"></i></span><h3 class="t-h3"><span data-l lang="ar">أنظمة المختبرات</span><span data-l lang="en">Laboratory systems</span></h3><p class="muted"><span data-l lang="ar">استقبال النتائج بصيغ معيارية مثل HL7 وFHIR.</span><span data-l lang="en">Receiving results in standard formats such as HL7 and FHIR.</span></p><span class="tag sim"><span data-l lang="ar">محاكاة في النموذج</span><span data-l lang="en">Simulated in the demo</span></span></div><div class="card"><span class="ic"><i data-icon="phone"></i></span><h3 class="t-h3"><span data-l lang="ar">مستشفى صحة الافتراضي</span><span data-l lang="en">Seha Virtual Hospital</span></h3><p class="muted"><span data-l lang="ar">تحويل طلبات التواصل إلى مستشار عن بُعد.</span><span data-l lang="en">Routing contact requests to a remote counsellor.</span></p><span class="tag sim"><span data-l lang="ar">محاكاة في النموذج</span><span data-l lang="en">Simulated in the demo</span></span></div><div class="card"><span class="ic"><i data-icon="message"></i></span><h3 class="t-h3"><span data-l lang="ar">بوابة الرسائل النصية</span><span data-l lang="en">SMS gateway</span></h3><p class="muted"><span data-l lang="ar">إرسال الدعوات الرسمية والتذكيرات.</span><span data-l lang="en">Sending official invitations and reminders.</span></p><span class="tag sim"><span data-l lang="ar">محاكاة في النموذج</span><span data-l lang="en">Simulated in the demo</span></span></div></div>
+  </div>
+</section>
+<section class="band band-tight cta-band" data-theme="dark"><div class="wrap">
+  <h2 class="t-h2"><span data-l lang="ar">افتح اللوحة واستعرض المؤشرات</span><span data-l lang="en">Open the console and explore the indicators</span></h2><div class="row"><a class="btn btn-primary" href="console.html"><i data-icon="grid"></i><span data-l lang="ar">لوحة الجهة المشرفة</span><span data-l lang="en">Authority console</span></a><a class="btn" href="contact.html"><span data-l lang="ar">تواصل مع الفريق</span><span data-l lang="en">Contact the team</span><i data-icon="arrow" class="flip-rtl"></i></a></div></div></section>
+</main>
+<footer id="site-footer"></footer>
+<script src="js/icons.js"></script>
+<script src="js/core.js"></script>
+
+<script src="js/tour-steps.js"></script>
+<script src="js/tour-engine.js"></script>
+</body>
+</html>
